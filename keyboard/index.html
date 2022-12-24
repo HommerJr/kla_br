@@ -1,0 +1,198 @@
+<!doctype html>
+<html ng-app="kla">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="./img/kb-q-10.png">
+
+    <title>Analisador de layouts de teclado – por Patorjk, SteveP, Spray e Tadeu Jr</title>
+
+<!--
+source code: https://github.com/NSUSpray/keyboard-layout-analyzer
+-->
+
+    <!-- vendor css -->
+    <link href="./vendor/bootstrap-flat/bootstrap.css" rel="stylesheet">
+    <link href="./vendor/jqplot/jquery.jqplot.min.css" rel="stylesheet">
+    
+    <!-- app css -->
+    <link rel="stylesheet" type="text/css" href="main.css?2013.12" />
+    <link rel="stylesheet" type="text/css" href="kb-config.css?2013" />
+    <link href="./keyboard/keyboard.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164160035-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164160035-1');
+    </script>
+
+</head>
+<body>
+    <div class="navbar navbar-fixed-top" style='z-index:1001;'>
+        <div class="navbar-inner">
+            <div class="container">
+
+                <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </a>
+
+                <!-- Be sure to leave the brand out there if you want it shown -->
+                <div class="brand" style='position:relative'>
+                    
+                    <div style='position:absolute; top:7px'>
+                        <img src='img/kb-q-10.png'>
+                    </div>
+                    <div style='margin-left:40px'>
+                        <span style="font-weight:bold">Analisador de layouts de teclado</span>
+                    </div>
+                </div>
+
+                <!-- Everything you want hidden at 940px or less, place within here -->
+                <div class="nav-collapse collapse">
+                    <!-- .nav, .navbar-search, .navbar-form, etc -->
+                    <ul class="nav pull-left">
+                        <li navbar-link>
+                            <a href="#/config" title="Editor de layouts (Alt+1)">⌨ Layouts</a>
+                        </li>
+                        <li navbar-link>
+                            <a href="#/main" title="Preferências do analisador (Alt+2)">🛠 Analisador</a>
+                        </li>
+                        <li navbar-link id="results-navbar-link" class="invisible" title="Resultados (Alt+3)">
+                            <a href="#/results">🏆 Resultados</a>
+                        </li>
+                    </ul>
+                </div>
+                    <ul class="nav pull-right">
+                        <li navbar-link>
+                            <a href="#/about">🛈 Sobre</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="view-container" class="container">
+        <div id='view' 
+            class='page'
+            ng-view="" 
+            ng-cloak></div>
+        <div id='kla-loading' class='text-center ng-cloak'>
+            <p>
+                <img src='img/loading_keyboard.png'/>
+            </p>
+            <p>
+                <img src='img/loading2.gif'>
+            </p>
+            Loading, one moment please…
+        </div>
+    </div>
+
+    <div id='newsModal' class='modal hide fade' tabindex='-1' role='dialog' aria-labelledby='resultLabel' aria-hidden='true'>
+        <div class='modal-header'>
+            <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button>
+            <h3 id='resultLabel'>News</h3>
+        </div>
+        <div class='modal-body'>
+        </div>
+
+        <div class='modal-footer'>
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
+
+    <div id='aboutModal' class='modal hide fade' tabindex='-1' role='dialog' aria-labelledby='resultLabel' aria-hidden='true'>
+        <div class='modal-header'>
+            <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button>
+            <h3 id='resultLabel'>About</h3>
+        </div>
+        <div class='modal-body'>
+        This application allows you to compare layouts. See the About section for more details. 
+        </div>
+
+        <div class='modal-footer'>
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
+
+    <div id='footer'>
+        <div id='footer-col-set'>
+            <div class='footer-col'>
+                <div class='footer-col-header'>Original application and other forks</div>
+                <div class='footer-col-fixed-width'>
+                    <ul>
+                        <li>
+                            <a href='http://patorjk.com/keyboard-layout-analyzer/'>Original KLA</a> by PAT or JK
+                        </li>
+                        <li>
+                            <a href='https://stevep99.github.io/keyboard-layout-analyzer/'>Parent KLA</a> by SteveP
+                        </li>
+                        <li>
+                            <a href='https://klanext.keyboard-design.com/'>KLAnext</a> by Den & Ian
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class='footer-col'>
+                <div class='footer-col-header'>Resources and feedback</div>
+                <div class='footer-col-fixed-width'>
+                    <ul>
+                        <li>
+                            <a href='https://keyboard-design.com/internet-letter-layout-db.html'>Keyboard Layout Database</a>
+                        </li>
+                        <li>
+                            <a href='https://github.com/NSUSpray/keyboard-layout-analyzer/issues'>Report a bug</a> | <a href='https://github.com/NSUSpray/keyboard-layout-analyzer'>GitHub repo</a>
+                        </li>
+                        <li>
+                            <a href='https://vk.com/nsu.spray'>Spray’s social</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end footer -->
+
+    <!-- Vendor Scripts -->
+    <script src="./vendor/jquery-1.9.1.min.js"></script>
+    <script src='./vendor/jqplot/jquery.jqplot.min.js'></script>
+    <script src="./vendor/jqplot/plugins/jqplot.pieRenderer.min.js"></script>
+    <script src="./vendor/jqplot/plugins/jqplot.barRenderer.min.js"></script>
+    <script src="./vendor/jqplot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+    <script src="./vendor/jqplot/plugins/jqplot.pointLabels.min.js"></script>
+
+    <script src='./vendor/heatmap.js'></script>
+
+    <script src="./vendor/bootstrap-flat/bootstrap.min.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-animate.min.js'></script>
+    <!--<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js'></script>-->
+
+    <!-- Custom GUI -->
+    <script src="./keyboard/kb.js"></script>
+    <script src="./keyboard/default_layouts.js"></script>
+    <script src="./keyboard/key.js"></script>
+    <script src="./keyboard/key-dialog.js"></script>
+    <script src="./keyboard/keyboard.js"></script>
+
+    <!-- App Scripts -->
+    <script src="js/app.js?2021.04.30"></script>
+    <script src="js/analyzer.js?2021.04.30"></script>
+
+    <script src="js/build/services.js?2021.04.30"></script>
+    <script src="js/build/controllers.js?2021.04.30"></script>
+    <script src="js/build/filters.js?2021.04.30"></script>
+    <script src="js/build/directives.js?2021.04.30"></script>
+    <script src="js/build/templates.js?2021.04.30"></script>
+
+    <!--<script src="js/animations.js"></script>-->
+
+</body>
+</html>
