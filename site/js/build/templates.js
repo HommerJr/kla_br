@@ -234,28 +234,28 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                    <label class='control-label'>Carregar/Salvar:</label>\n" +
     "                    <div class='controls'>\n" +
     "                        <div class=\"btn-group dropdown\">\n" +
-    "                            <a id=\"kb-config-copy\" class=\"btn\" ng-click=\"copyJson()\" title=\"Copy this layout to clipboard (Ctrl+C)\">Copy</a>\n" +
+    "                            <a id=\"kb-config-copy\" class=\"btn\" ng-click=\"copyJson()\" title=\"Copiar esse layout para a área de transferência (Ctrl+C)\">Copiar</a>\n" +
     "                            <button type=\"button\" class=\"btn dropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n" +
     "                                <span class=\"caret\"></span>\n" +
     "                            </button>\n" +
     "                            <ul class=\"dropdown-menu\">\n" +
-    "                                <li><a ng-click=\"copyJson(fingering=true)\" title=\"Copy finger zones and positions\">Copy Fingering</a></li>\n" +
-    "                                <li><a ng-click=\"copyAllJson()\" title=\"Copy the whole set\">Copy All Layouts</a></li>\n" +
+    "                                <li><a ng-click=\"copyJson(fingering=true)\" title=\"Copiar esse layout\">Copiar esse layout</a></li>\n" +
+    "                                <li><a ng-click=\"copyAllJson()\" title=\"Copiar todos os layouts\">Copiar todos layouts</a></li>\n" +
     "                            </ul>\n" +
     "                        </div>\n" +
-    "                        <button id=\"kb-config-import\" class=\"btn\" ng-click=\"showImportDialog()\" title=\"Load some layout/fingering/set here (Ctrl+V)\">Paste</button>\n" +
-    "                        <!-- <input type=\"file\" id=\"kb-config-import\" class=\"btn\" ng-click=\"importJson()\" title=\"Load some layout data from computer\">Import</button> -->\n" +
+    "                        <button id=\"kb-config-import\" class=\"btn\" ng-click=\"showImportDialog()\" title=\"Carregar um ou conjunto de layouts (Ctrl+V)\">Colar</button>\n" +
+    "                        <!-- <input type=\"file\" id=\"kb-config-import\" class=\"btn\" ng-click=\"importJson()\" title=\"Load some layout data from computer\">Importar</button> -->\n" +
     "                        <div class=\"btn-group dropdown\">\n" +
-    "                            <a id=\"kb-config-export\" class=\"btn\" ng-mouseenter=\"exportJson()\" title=\"Save this layout to file\">Export</a>\n" +
+    "                            <a id=\"kb-config-export\" class=\"btn\" ng-mouseenter=\"exportJson()\" title=\"Gravar layout em um arquivo\">Exportar</a>\n" +
     "                            <button type=\"button\" class=\"btn dropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n" +
     "                                <span class=\"caret\"></span>\n" +
     "                            </button>\n" +
     "                            <ul class=\"dropdown-menu\">\n" +
-    "                                <li><a id=\"kb-config-export-fingering\" ng-mouseenter=\"exportJson(fingering=true)\" title=\"Save finger zones and positions\">Export Fingering</a></li>\n" +
-    "                                <li><a id=\"kb-config-export-all\" ng-mouseenter=\"exportAllJson()\" title=\"Save the whole set to single file\">Exprot All Layouts</a></li>\n" +
+    "                                <li><a id=\"kb-config-export-fingering\" ng-mouseenter=\"exportJson(fingering=true)\" title=\"Gravar esse layout em um arquivo\">Exportar esse layout</a></li>\n" +
+    "                                <li><a id=\"kb-config-export-all\" ng-mouseenter=\"exportAllJson()\" title=\"Gravar todos os layouts em um arquivo\">Exportar todos layouts</a></li>\n" +
     "                            </ul>\n" +
     "                        </div>\n" +
-    "                        <!-- <button id=\"kb-config-export\" class=\"btn\" ng-click=\"showExportDialog()\">Export</button> -->\n" +
+    "                        <!-- <button id=\"kb-config-export\" class=\"btn\" ng-click=\"showExportDialog()\">Exportar</button> -->\n" +
     "                    </div>\n" +
     "                </div>\n" +
     "\n" +
@@ -392,33 +392,33 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "        <div id='kb-config-import-dialog' class='modal hide fade' tabindex='-1' role='dialog' aria-labelledby='resultLabel' aria-hidden='true'>\n" +
     "            <div class='modal-header'>\n" +
     "                <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button>\n" +
-    "                <h3 id='resultLabel'>Import Layouts</h3>\n" +
+    "                <h3 id='resultLabel'>Importar Layouts</h3>\n" +
     "            </div>\n" +
     "            <div class='modal-body'>\n" +
     "\n" +
     "                <textarea class='input-block-level kb-config-dialog-txt'></textarea>\n" +
     "                <p class='text-left'>\n" +
-    "                    Paste the text of a previously copied or exported layout/fingering/set in the textbox above and press “Import” to load.\n" +
+    "                    Cole o texto de um layout copiado ou exportado anteriormente na caixa de texto acima e clique em “Importar” para carregá-lo no analisador.\n" +
     "                </p>\n" +
     "            </div>\n" +
     "\n" +
     "            <div class='modal-footer'>\n" +
-    "                <form id='importFilter' class='form-horizontal form-inline pull-left'>\n" +
-    "                    <label class='control-label'>Filter:</label>\n" +
-    "                        <div class=\"btn-group\">\n" +
-    "                            <label class=\"radio inline\">\n" +
-    "                                <input type=\"radio\" name=\"import-filter\" value=\"all\" ng-model=\"submitter.importFilter\"> All\n" +
-    "                            </label>\n" +
-    "                            <label class=\"radio inline\">\n" +
-    "                                <input type=\"radio\" name=\"import-filter\" value=\"non-letters\" ng-model=\"submitter.importFilter\"> Non-Letters\n" +
-    "                            </label>\n" +
-    "                            <label class=\"radio inline\">\n" +
-    "                                <input type=\"radio\" name=\"import-filter\" value=\"altGr\" ng-model=\"submitter.importFilter\"> “Alt Gr” Layer\n" +
-    "                            </label>\n" +
-    "                        </div>\n" +
-    "                </form>\n" +
-    "                <button class=\"btn\" ng-click=\"importLayout()\">Import</button>\n" +
-    "                <button class=\"btn\" data-dismiss=\"modal\" aria-hidden=\"true\">Close</button>\n" +
+    // "                <form id='importFilter' class='form-horizontal form-inline pull-left'>\n" +
+    // "                    <label class='control-label'>Filter:</label>\n" +
+    // "                        <div class=\"btn-group\">\n" +
+    // "                            <label class=\"radio inline\">\n" +
+    // "                                <input type=\"radio\" name=\"import-filter\" value=\"all\" ng-model=\"submitter.importFilter\"> All\n" +
+    // "                            </label>\n" +
+    // "                            <label class=\"radio inline\">\n" +
+    // "                                <input type=\"radio\" name=\"import-filter\" value=\"non-letters\" ng-model=\"submitter.importFilter\"> Non-Letters\n" +
+    // "                            </label>\n" +
+    // "                            <label class=\"radio inline\">\n" +
+    // "                                <input type=\"radio\" name=\"import-filter\" value=\"altGr\" ng-model=\"submitter.importFilter\"> “Alt Gr” Layer\n" +
+    // "                            </label>\n" +
+    // "                        </div>\n" +
+    // "                </form>\n" +
+    "                <button class=\"btn\" ng-click=\"importLayout()\">Importar</button>\n" +
+    "                <button class=\"btn\" data-dismiss=\"modal\" aria-hidden=\"true\">Fechar</button>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "\n" +
@@ -426,7 +426,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "        <div id='kb-config-export-dialog' class='modal hide fade' tabindex='-1' role='dialog' aria-labelledby='resultLabel' aria-hidden='true'>\n" +
     "            <div class='modal-header'>\n" +
     "                <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button>\n" +
-    "                <h3 id='resultLabel'>Export Layout</h3>\n" +
+    "                <h3 id='resultLabel'>Exportar layout</h3>\n" +
     "            </div>\n" +
     "            <div class='modal-body'>\n" +
     "\n" +

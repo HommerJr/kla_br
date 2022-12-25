@@ -40,7 +40,7 @@ appControllers.controller('ConfigCtrl', ['$scope', '$http', '$timeout', '$log', 
             });
             $('#importFilter').removeClass('hide');
             $importBtn.removeClass('btn-warning');
-            $importBtn.html('Import');
+            $importBtn.html('Importar');
             setTimeout(function() {$('#kb-config-import-dialog textarea').focus();}, 750);
         };
 
@@ -171,7 +171,7 @@ appControllers.controller('ConfigCtrl', ['$scope', '$http', '$timeout', '$log', 
                 if ( Array.isArray(res.keySet) && !$importBtn.hasClass('btn-warning') ) {
                     $('#importFilter').addClass('hide');
                     $importBtn.addClass('btn-warning');
-                    $importBtn.html('Import in Place of All Current');
+                    $importBtn.html('Importar no lugar de todos os layouts atuais');
                     return;
                 }
                 res = $scope.setLayout(res.keySet, $scope.submitter.importFilter);
@@ -183,7 +183,7 @@ appControllers.controller('ConfigCtrl', ['$scope', '$http', '$timeout', '$log', 
                 setTimeout(function() { $('#kb-config-import-dialog textarea').focus(); }, 250);
 	        }
             $importBtn.removeClass('btn-warning');
-            $importBtn.html('Import');
+            $importBtn.html('Importar');
 	    };
 
 	    $scope.loadLayout = function(loadFilter='all') {
