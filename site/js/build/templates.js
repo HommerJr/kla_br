@@ -4,19 +4,21 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
   $templateCache.put('partials/about.htm',
     "<div>\n" +
     "    <div class=\"jumbotron subhead\">\n" +
-    "        <h1>About</h1>\n" +
+    "        <h1>Sobre</h1>\n" +
     "    </div>\n" +
     "    <p>\n" +
+    "        O site ainda não está totalmente traduzido, mas o analisador já está totalmente funcional.\n" +
+    "    <hr/>\n" +
+    "    </p>\n" +
     "        This application allows you to analyze and visualize the typing patterns you create when you use different keyboard layouts, such as the\n" +
     "        <a href=\"https://en.wikipedia.org/wiki/QWERTY\">QWERTY</a>, <a href=\"http://www.theworldofstuff.com/dvorak/\">Dvorak</a>, and\n" +
     "        <a href=\"http://colemak.com/\">Colemak</a> layouts.\n" +
     "    </p>\n" +
-    "    <hr/>\n" +
     "    <p>\n" +
-    "    This version of the app was <a href=\"https://github.com/stevep99/keyboard-layout-analyzer\">forked by SteveP</a> from the original <a href=\"http://patorjk.com/keyboard-layout-analyzer/\">Keyboard Layout Analyzer</a> by PAT or JK.\n" +
+    "    This version of the app was <a href=\"https://github.com/stevep99/keyboard-layout-analyzer\">forked by SteveP</a> from the original <a href=\"http://patorjk.com/keyboard-layout-analyzer/\">Keyboard Layout Analyzer</a> by Patorjk.\n" +
     "    </p>\n" +
     "    <p>A number of changes are made in this version with the aim of making the analyzer more useful and accurate, particularly in regard to the scoring calculation. \n" +
-    "    The changes are detailed below, so you can evaluate the merits of these changes yourself. A huge thanks to Patrick (PAT or JK) for releasing his source code, making this forked version possible!\n" +
+    "    The changes are detailed below, so you can evaluate the merits of these changes yourself. A huge thanks to Patrick (Patorjk) for releasing his source code, making this forked version possible!\n" +
     "    </p>\n" +
     "\n" +
     "    <h2>Scoring Algorithm</h2>\n" +
@@ -168,7 +170,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "            <div class='controls'>\n" +
     "                <button class=\"btn btn-large\" type=\"button\"\n" +
     "                    ng-click=\"generateOutput()\"\n" +
-    "                    title=\"See which layout is best (Ctrl+Enter)\">Analisar</button>\n" +
+    "                    title=\"Veja qual layout é melhor (Ctrl+Enter)\">Analisar</button>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "        <h1>Layouts</h1>\n" +
@@ -504,7 +506,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "    <p>\n" +
     "    	<img src='img/loading2.gif'>\n" +
     "    </p>\n" +
-    "    Loading, one moment please…\n" +
+    "    Escolha ou cole um texto.\n" +
     "</div>"
   );
 
@@ -516,15 +518,15 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "            <div class='controls'>\n" +
     "                <button class=\"btn btn-large\" type=\"button\"\n" +
     "                    ng-click=\"generateOutput()\"\n" +
-    "                    title=\"See which layout is best (Ctrl+Enter)\">Analisar</button>\n" +
+    "                    title=\"Veja qual layout é melhor (Ctrl+Enter)\">Analisar</button>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "        <h1>Analyzer</h1>\n" +
-    "        <p class=\"lead\"><strong>Choose</strong> a sample text or <strong>Adjust</strong> the engine<p>\n" +
+    "        <h1>Analisador</h1>\n" +
+    "        <p class=\"lead\"><strong>Escolha</strong> ou <strong>cole</strong> um texto e <strong>ajuste</strong> o algoritmo de análise<p>\n" +
     "    </div>\n" +
     "    <form id='text-input-form'>\n" +
     "        <div class='control-group'>\n" +
-    "            <label class='control-label' for='text-presets'>Text Presets:</label>\n" +
+    "            <label class='control-label' for='text-presets'>Textos predefinidos:</label>\n" +
     "            <div class='controls'>\n" +
     "                <select id='text-presets' size='2' ng-model='data.textPreset' ng-change=\"applyTextPreset()\">\n" +
     "                    <optgroup label='English Prose'>\n" +
@@ -561,86 +563,86 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "        </div>\n" +
     "\n" +
     "        <div class='control-group'>\n" +
-    "            <label class='control-label' for='txt-input'>Load or paste some text that reflects what you type on a daily basis</label>\n" +
+    "            <label class='control-label' for='txt-input'>Escolha ou cole um texto para ser analisado:</label>\n" +
     "            <div class='controls'>\n" +
     "                <textarea id='txt-input' class='input-block-level' ng-model='data.text' ng-trim='false'></textarea>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "        <div class='control-group'>\n" +
-    "            <label class='control-label'>Enrich:</label>\n" +
-    "            <div id='typographics' class='controls'>\n" +
-    "               <button id=\"en\" class=\"btn\" type=\"button\" ng-click=\"typographic('en')\" title=\"Convert ASCII punctuation to English typographic marks\">EN</button>\n" +
-    "               <button id=\"ru\" class=\"btn\" type=\"button\" ng-click=\"typographic('ru')\" title=\"Convert ASCII punctuation to Russian typographic marks\">RU</button>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
+    // "        <div class='control-group'>\n" +
+    // "            <label class='control-label'>Enrich:</label>\n" +
+    // "            <div id='typographics' class='controls'>\n" +
+    // "               <button id=\"en\" class=\"btn\" type=\"button\" ng-click=\"typographic('en')\" title=\"Convert ASCII punctuation to English typographic marks\">EN</button>\n" +
+    // "               <button id=\"ru\" class=\"btn\" type=\"button\" ng-click=\"typographic('ru')\" title=\"Convert ASCII punctuation to Russian typographic marks\">RU</button>\n" +
+    // "            </div>\n" +
+    // "        </div>\n" +
     "    </form>\n" +
     "    <form class='form-horizontal'>\n" +
-    "        <div class='control-group'>\n" +
-    "            <label class='control-label'>Text Preprocessor:</label>\n" +
-    "            <div class='controls'>\n" +
-    "                <label class='checkbox inline'>\n" +
-    "                    <input class=\"kla-result-checkbox ng-pristine ng-valid\" ng-model=\"settings.simplify\" type=\"checkbox\">\n" +
-    "                        <abbr title='Replace characters with their ASCII counterparts if they are not present in the target layout:\n\t\t— – “ ” „ ‘ ’ ′ ″ ‴ « » ‹ › 〈 〉 × · © ® ™ \nwith\n\t\t-- \" &apos; < > * (c) (R) TM'>\n" +
-    "                            Simplify punctuation for non-typographic layouts\n" +
-    "                        </abbr>\n" +
-    "                </label>\n" +
-    "                <label class='checkbox inline'>\n" +
-    "                    <input class=\"kla-result-checkbox ng-pristine ng-valid\" ng-model=\"settings.ctrlKeys\" type=\"checkbox\">\n" +
-    "                        <abbr title='Interpret char sequences like &lt;u:8&gt;, &lt;u:1b&gt;, &lt;u:11&gt;, etc. as Backspace, Esc and Ctrl (8, 1b and 11 are hex codes of this keys)'>\n" +
-    "                            Allow modifier/control keys in input text\n" +
-    "                        </abbr>\n" +
-    "                </label>\n" +
-    "            </div>\n" +
-    "            <label class='control-label'>Emulate Auto-Indent:</label>\n" +
-    "            <div class='controls'>\n" +
-    "                <div class=\"btn-group\">\n" +
-    "                    <label class=\"radio inline\">\n" +
-    "                        <input type=\"radio\" name=\"emulate-auto-indent\" value=\"none\" ng-model=\"settings.autoIndent\"> None\n" +
-    "                    </label>\n" +
-    "                    <label class=\"radio inline\">\n" +
-    "                        <input type=\"radio\" name=\"emulate-auto-indent\" value=\"simple\" ng-model=\"settings.autoIndent\">\n" +
-    "                        <abbr title=\"Skip extra indents and insert backspaces when indenting decreases (the text editor repeats the indentation of the previous line)\">\n" +
-    "                            Basic\n" +
-    "                        </abbr>\n" +
-    "                    </label>\n" +
-    "                    <label class=\"radio inline\">\n" +
-    "                        <input type=\"radio\" name=\"emulate-auto-indent\" value=\"smart\" ng-model=\"settings.autoIndent\">\n" +
-    "                        <abbr title=\"Skip indentation (the text editor arranges all indents automatically)\">IDE</abbr>\n" +
-    "                    </label>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
+    // "        <div class='control-group'>\n" +
+    // "            <label class='control-label'>Text Preprocessor:</label>\n" +
+    // "            <div class='controls'>\n" +
+    // "                <label class='checkbox inline'>\n" +
+    // "                    <input class=\"kla-result-checkbox ng-pristine ng-valid\" ng-model=\"settings.simplify\" type=\"checkbox\">\n" +
+    // "                        <abbr title='Replace characters with their ASCII counterparts if they are not present in the target layout:\n\t\t— – “ ” „ ‘ ’ ′ ″ ‴ « » ‹ › 〈 〉 × · © ® ™ \nwith\n\t\t-- \" &apos; < > * (c) (R) TM'>\n" +
+    // "                            Simplify punctuation for non-typographic layouts\n" +
+    // "                        </abbr>\n" +
+    // "                </label>\n" +
+    // "                <label class='checkbox inline'>\n" +
+    // "                    <input class=\"kla-result-checkbox ng-pristine ng-valid\" ng-model=\"settings.ctrlKeys\" type=\"checkbox\">\n" +
+    // "                        <abbr title='Interpret char sequences like &lt;u:8&gt;, &lt;u:1b&gt;, &lt;u:11&gt;, etc. as Backspace, Esc and Ctrl (8, 1b and 11 are hex codes of this keys)'>\n" +
+    // "                            Allow modifier/control keys in input text\n" +
+    // "                        </abbr>\n" +
+    // "                </label>\n" +
+    // "            </div>\n" +
+    // "            <label class='control-label'>Emulate Auto-Indent:</label>\n" +
+    // "            <div class='controls'>\n" +
+    // "                <div class=\"btn-group\">\n" +
+    // "                    <label class=\"radio inline\">\n" +
+    // "                        <input type=\"radio\" name=\"emulate-auto-indent\" value=\"none\" ng-model=\"settings.autoIndent\"> None\n" +
+    // "                    </label>\n" +
+    // "                    <label class=\"radio inline\">\n" +
+    // "                        <input type=\"radio\" name=\"emulate-auto-indent\" value=\"simple\" ng-model=\"settings.autoIndent\">\n" +
+    // "                        <abbr title=\"Skip extra indents and insert backspaces when indenting decreases (the text editor repeats the indentation of the previous line)\">\n" +
+    // "                            Basic\n" +
+    // "                        </abbr>\n" +
+    // "                    </label>\n" +
+    // "                    <label class=\"radio inline\">\n" +
+    // "                        <input type=\"radio\" name=\"emulate-auto-indent\" value=\"smart\" ng-model=\"settings.autoIndent\">\n" +
+    // "                        <abbr title=\"Skip indentation (the text editor arranges all indents automatically)\">IDE</abbr>\n" +
+    // "                    </label>\n" +
+    // "                </div>\n" +
+    // "            </div>\n" +
+    // "        </div>\n" +
     "    </form>\n" +
     "    <form class='pull-right'>\n" +
     "        <div class='control-group'>\n" +
-    "            <label class='control-label' for='calc-preset'>Preset:</label>\n" +
+    "            <label class='control-label' for='calc-preset'>Ajustes predefinidos:</label>\n" +
     "            <div class='controls'>\n" +
     "                <select id='calc-preset' ng-model='data.calcPreset' ng-change=\"applyCalcPreset()\">\n" +
     "                    <option value='spray'>Spray</option>\n" +
     "                    <option value='stevep'>SteveP</option>\n" +
-    "                    <option value='patorjk'>PAT or JK</option>\n" +
+    "                    <option value='patorjk'>Patorjk</option>\n" +
     "                    <option value='compromise'>Ergonomics vs Difficulty</option>\n" +
     "                </select>\n" +
     "            </div>\n" +
     "        </div>\n" + 
     "    </form>\n" +
     "    <form class='form-horizontal'>\n" +
-    "        <h4>Total Score</h4>\n" +
+    "        <h4>Pontuação Total</h4>\n" +
     "        <div class='control-group'>\n" +
-    "            <label class='control-label'>Ratio of Factors:</label>\n" +
+    "            <label class='control-label'>Distribuição entre os elementos:</label>\n" +
     "            <div class='controls'>\n" +
     "                <table class=\"kla-table-adjust\">\n" +
     "                    <thead>\n" +
     "                        <tr>\n" +
-    "                            <th>Distance</th>\n" +
+    "                            <th><abbr title=\"Proporção da utilização da penalização da movimentação dos dedos na pontuação\">Distância</th>\n" +
     "                            <th></th>\n" +
-    "                            <th><abbr title=\"Finger usage\">F. Usage</abbr></th>\n" +
+    "                            <th><abbr title=\"Proporção da utilização da penalização do uso dos dedos na pontuação\">Uso dedo</abbr></th>\n" +
     "                            <th></th>\n" +
-    "                            <th><abbr title=\"Same finger\">Same F.</abbr></th>\n" +
+    "                            <th><abbr title=\"Proporção da utilização da penalização do uso do mesmo dedo na pontuação\">Mesmo dedo</abbr></th>\n" +
     "                            <th></th>\n" +
-    "                            <th><abbr title=\"Same hand\">Same H.</abbr></th>\n" +
+    "                            <th><abbr title=\"Proporção da utilização da penalização do uso da mesma mão na pontuação\">Mesma mão</abbr></th>\n" +
     "                            <th></th>\n" +
-    "                            <th>Similarity</th>\n" +
+    "                            <th>Similaridade</th>\n" +
     "                        </tr>\n" +
     "                    </thead>\n" +
     "                    <tbody>\n" +
@@ -659,9 +661,9 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                </table>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "        <h4>Distance</h4>\n" +
+    "        <h4>Distância</h4>\n" +
     "        <div class='control-group'>\n" +
-    "            <label class='control-label'>Hand Approaches:</label>\n" +
+    "            <label class='control-label'>Posição das mãos:</label>\n" +
     "            <div class='controls'>\n" +
     "                <input class=\"input-block-level\" ng-model=\"settings.thetas.left\" ng-disabled=\"settings.weightDistance==0||settings.autoThetas\" type=\"number\" min=\"-90\" max=\"90\" step=\"5\">°\n" +
     "                <div id=\"left-hand\" title=\"Left hand approach\">🤚</div>\n" +
@@ -669,21 +671,21 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                <input class=\"input-block-level\" ng-model=\"settings.thetas.right\" ng-disabled=\"settings.weightDistance==0||settings.autoThetas\"type=\"number\" min=\"-90\" max=\"90\" step=\"5\">°\n" +
     "                <button style=\"vertical-align: middle; margin-left: 4px; cursor: help;\" title=\"\\ ₍-₎\\\t−15 : −15°\tclassical\n\n/₍-₎\\\t+30° : −20°\tArensito\n\nI ₍-₎ I\t     0° :     0°\trude\" tabindex=\"-1\"><div class=\"kb-dialog-help\"></div></button>\n" +
     "                <label class=\"checkbox inline\">\n" +
-    "                    <input class=\"kla-result-checkbox ng-pristine ng-valid\" ng-model=\"settings.autoThetas\" ng-disabled=\"settings.weightDistance==0\" type=\"checkbox\"> <abbr title=\"Calculate the angles from the middle finger zones using the least squares method\">Automatic</abbr>\n" +
+    "                    <input class=\"kla-result-checkbox ng-pristine ng-valid\" ng-model=\"settings.autoThetas\" ng-disabled=\"settings.weightDistance==0\" type=\"checkbox\"> <abbr title=\"Calculate the angles from the middle finger zones using the least squares method\">Automático</abbr>\n" +
     "                </label>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "        <div class='control-group'>\n" +
-    "            <label class='control-label'>Finger Effort:</label>\n" +
+    "            <label class='control-label'>Penalização na movimentação dos dedos:</label>\n" +
     "            <div class='controls'>\n" +
     "                <table class=\"kla-table-adjust\">\n" +
     "                    <thead>\n" +
     "                        <tr>\n" +
-    "                            <th>Thumb</th>\n" +
-    "                            <th>Index</th>\n" +
-    "                            <th>Middle</th>\n" +
-    "                            <th>Ring</th>\n" +
-    "                            <th>Pinky</th>\n" +
+    "                            <th>Dedão</th>\n" +
+    "                            <th>Indicador</th>\n" +
+    "                            <th>Médio</th>\n" +
+    "                            <th>Anelar</th>\n" +
+    "                            <th>Mínimo</th>\n" +
     "                        </tr>\n" +
     "                    </thead>\n" +
     "                    <tbody>\n" +
@@ -706,22 +708,22 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                    </tbody>\n" +
     "                </table>\n" +
     "                <label class=\"checkbox\">\n" +
-    "                    <input class=\"kla-result-checkbox ng-pristine ng-valid\" ng-model=\"settings.applyFittsLaw\" ng-disabled=\"settings.weightDistance==0\" type=\"checkbox\"> <abbr title=\"According to Fitts’s law estimated effort for a variety of actions, based on the distance, should not linear\">Logarithmic distance</abbr>\n" +
+    "                    <input class=\"kla-result-checkbox ng-pristine ng-valid\" ng-model=\"settings.applyFittsLaw\" ng-disabled=\"settings.weightDistance==0\" type=\"checkbox\"> <abbr title=\"De acordo com a lei de Fitts’s, a estimação da distância de uma variedade de ações, como o movimentar dos dedos, não deve ser linear\">Distância em logaritmo</abbr>\n" +
     "                </label>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "        <h4>Finger Usage</h4>\n" +
+    "        <h4>Uso dos dedos</h4>\n" +
     "        <div class='control-group'>\n" +
-    "            <label class='control-label'>Finger Effort:</label>\n" +
+    "            <label class='control-label'>Penalização na utilização dos dedos:</label>\n" +
     "            <div class='controls'>\n" +
     "                <table class=\"kla-table-adjust\">\n" +
     "                    <thead>\n" +
     "                        <tr>\n" +
-    "                            <td>Thumb</td>\n" +
-    "                            <td>Index</td>\n" +
-    "                            <td>Middle</td>\n" +
-    "                            <td>Ring</td>\n" +
-    "                            <td>Pinky</td>\n" +
+    "                            <td>Dedão</td>\n" +
+    "                            <td>Indicador</td>\n" +
+    "                            <td>Médio</td>\n" +
+    "                            <td>Anelar</td>\n" +
+    "                            <td>Mínimo</td>\n" +
     "                        </tr>\n" +
     "                    </thead>\n" +
     "                    <tbody>\n" +
@@ -735,24 +737,24 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                    </tbody>\n" +
     "                </table>\n" +
     "            </div>\n" +
-    "            <label class='control-label'>Balancing Method:</label>\n" +
+    "            <label class='control-label'>Método de cálculo:</label>\n" +
     "            <div class='controls'>\n" +
     "                <div class=\"btn-group\">\n" +
     "                    <label class=\"radio inline\">\n" +
     "                        <input type=\"radio\" name=\"finger-score-method\" value=\"stevep\" ng-model=\"settings.fScoringMethod\" ng-disabled=\"settings.weightKeystroke==0\"> SteveP\n" +
     "                    </label>\n" +
     "                    <label class=\"radio inline\">\n" +
-    "                        <input type=\"radio\" name=\"finger-score-method\" value=\"patorjk\" ng-model=\"settings.fScoringMethod\" ng-disabled=\"settings.weightKeystroke==0\"> <abbr title=\"Weight ∼ exp(−5 Effort)\">PAT or JK</abbr>\n" +
+    "                        <input type=\"radio\" name=\"finger-score-method\" value=\"patorjk\" ng-model=\"settings.fScoringMethod\" ng-disabled=\"settings.weightKeystroke==0\"> <abbr title=\"Weight ∼ exp(−5 Effort)\">Patorjk</abbr>\n" +
     "                    </label>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "        <h4>Similarity</h4>\n" +
+    "        <h4>Similaridade</h4>\n" +
     "        <div class='control-group'>\n" +
-    "            <label class='control-label'>Transition Effort:</label>\n" +
+    "            <label class='control-label'>Esforço de transição:</label>\n" +
     "            <div class='controls'>\n" +
     "                <div class=\"btn-group dropup pull-right\">\n" +
-    "                    <button data-toggle=\"dropdown\" class=\"btn dropdown-toggle\" data-placeholder=\"false\" ng-disabled=\"settings.weightSimilarity==0\">Reference: {{layoutNames[settings.refLayoutIndex]}}<span class=\"caret\"></span></button>\n" +
+    "                    <button data-toggle=\"dropdown\" class=\"btn dropdown-toggle\" data-placeholder=\"false\" ng-disabled=\"settings.weightSimilarity==0\">Referência: {{layoutNames[settings.refLayoutIndex]}}<span class=\"caret\"></span></button>\n" +
     "                    <ul class=\"dropdown-menu\">\n" +
     "                        <li ng-repeat=\"layoutName in layoutNames\">\n" +
     "                            <input type=\"radio\" name='kla-opt-layout-radio' id=\"kla-opt-dd-{{$index}}\" ng-model=\"settings.refLayoutIndex\" value='{{$index}}' /><label for=\"kla-opt-dd-{{$index}}\" >{{layoutName}}</label>\n" +
@@ -762,11 +764,11 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                <table class=\"kla-table-adjust\">\n" +
     "                    <thead>\n" +
     "                        <tr>\n" +
-    "                            <td><abbr title=\"Character is typed with the same finger, but is in a different layer\">Layer</abbr></td>\n" +
-    "                            <td><abbr title=\"Character is typed with the same finger, but is in a different row\">Row</abbr></td>\n" +
-    "                            <td><abbr title=\"Character is typed with the same hand, but with a different finger\">Finger</abbr></td>\n" +
-    "                            <td><abbr title=\"Character is typed with the different hand\">Hand</abbr></td>\n" +
-    "                            <td><abbr title=\"Character is missing from the layout\">Missing</abbr></td>\n" +
+    "                            <td><abbr title=\"O caractere é digitado pelo mesmo dedo, mas em uma camada diferente\">Camada</abbr></td>\n" +
+    "                            <td><abbr title=\"O caractere é digitado pelo mesmo dedo, mas em uma linha diferente\">Linha</abbr></td>\n" +
+    "                            <td><abbr title=\"O caractere é digitado pela mesma mão, mas com um dedo diferente\">Dedo</abbr></td>\n" +
+    "                            <td><abbr title=\"O caractere é digitado com uma mão diferente\">Mão</abbr></td>\n" +
+    "                            <td><abbr title=\"O caractere está faltando no layout\">Faltando</abbr></td>\n" +
     "                        </tr>\n" +
     "                    </thead>\n" +
     "                    <tbody>\n" +
@@ -780,7 +782,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                    </tbody>\n" +
     "                </table>\n" +
     "                <label class=\"checkbox\">\n" +
-    "                    <input class=\"kla-result-checkbox ng-pristine ng-valid\" ng-model=\"settings.charFreqAccounting\" ng-disabled=\"settings.weightSimilarity==0\" type=\"checkbox\"> Take into account the character frequency\n" +
+    "                    <input class=\"kla-result-checkbox ng-pristine ng-valid\" ng-model=\"settings.charFreqAccounting\" ng-disabled=\"settings.weightSimilarity==0\" type=\"checkbox\"> Levar em consideração a frequência do caractere\n" +
     "                </label>\n" +
     "            </div>\n" +
     "        </div>\n" +
@@ -881,15 +883,15 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "<div>\n" +
     "    <div class=\"jumbotron subhead\">\n" +
     "        <h1>Results</h1>\n" +
-    "        <p class=\"lead\">See each tab for detailed analysis<p>\n" +
+    "        <p class=\"lead\">Veja cada aba para uma análise detalhada <p>\n" +
     "    </div>\n" +
     "    <ul class='nav nav-pills' id='main-output-tabs'>\n" +
-    "        <li class='kla-pill active'><a ng-click='tabSwitch($event, \"summary\")' href='#summary'>Summary</a></li>\n" +
-    "        <li class='kla-pill'><a ng-click='tabSwitch($event, \"heatMaps\")' href='#heatMaps'>Heat Maps</a></li>\n" +
-    "        <li class='kla-pill'><a ng-click='tabSwitch($event, \"distance\")' href='#distance'>Distance</a></li>\n" +
-    "        <li class='kla-pill'><a ng-click='tabSwitch($event, \"fingerUsage\")' href='#fingerUsage'>Finger Usage</a></li>\n" +
-    "        <li class='kla-pill'><a ng-click='tabSwitch($event, \"rowUsage\")' href='#rowUsage'>Row Usage</a></li>\n" +
-    "        <li class='kla-pill'><a ng-click='tabSwitch($event, \"miscellaneous\")' href='#miscellaneous'>Miscellaneous</a></li>\n" +
+    "        <li class='kla-pill active'><a ng-click='tabSwitch($event, \"summary\")' href='#summary'>Pontuação</a></li>\n" +
+    "        <li class='kla-pill'><a ng-click='tabSwitch($event, \"heatMaps\")' href='#heatMaps'>Mapa de calor</a></li>\n" +
+    "        <li class='kla-pill'><a ng-click='tabSwitch($event, \"distance\")' href='#distance'>Distância</a></li>\n" +
+    "        <li class='kla-pill'><a ng-click='tabSwitch($event, \"fingerUsage\")' href='#fingerUsage'>Uso dos dedos</a></li>\n" +
+    "        <li class='kla-pill'><a ng-click='tabSwitch($event, \"rowUsage\")' href='#rowUsage'>Uso das linhas</a></li>\n" +
+    "        <li class='kla-pill'><a ng-click='tabSwitch($event, \"miscellaneous\")' href='#miscellaneous'>Diversos</a></li>\n" +
     "        <!-- <li class='kla-pill'><a ng-click='tabSwitch($event, \"personalized\")' href='#personalized'>Personalized</a></li> -->\n" +
     "    </ul>\n" +
     "    <div class='tab-content'>\n" +
@@ -968,13 +970,13 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                    </colgroup>\n" +
     "                    <thead>\n" +
     "                        <tr>\n" +
-    "                            <th>Distance</th>\n" +
+    "                            <th><abbr title=\"Proporção da utilização da penalização da movimentação dos dedos na pontuação\">Distância</th>\n" +
     "                            <th></th>\n" +
-    "                            <th><abbr title=\"Finger usage\">F. Usage</abbr></th>\n" +
+    "                            <th><abbr title=\"Proporção da utilização da penalização do uso dos dedos na pontuação\">Uso dedo</abbr></th>\n" +
     "                            <th></th>\n" +
-    "                            <th><abbr title=\"Same finger\">Same F.</abbr></th>\n" +
+    "                            <th><abbr title=\"Proporção da utilização da penalização do uso do mesmo dedo na pontuação\">Mesmo dedo</abbr></th>\n" +
     "                            <th></th>\n" +
-    "                            <th><abbr title=\"Same hand\">Same H.</abbr></th>\n" +
+    "                            <th><abbr title=\"Proporção da utilização da penalização do uso da mesma mão na pontuação\">Mesma mão</abbr></th>\n" +
     "                            <th></th>\n" +
     "                            <th>Similarity</th>\n" +
     "                        </tr>\n" +
