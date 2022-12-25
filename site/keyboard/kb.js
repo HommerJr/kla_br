@@ -245,12 +245,12 @@ KB.glyphLayouts.european[KB.SHIFT_ALTGR_PUSH] = function(keyCode,fontSize,coords
 };
 
 
-KB.glyphLayouts.europeanBR = {};
-KB.glyphLayouts.europeanBR.getCoords = function(id, type, keyCode, fontSize, coords) {
-    return KB.glyphLayouts.europeanBR[type](keyCode, fontSize, coords);
+KB.glyphLayouts.iso_br = {};
+KB.glyphLayouts.iso_br.getCoords = function(id, type, keyCode, fontSize, coords) {
+    return KB.glyphLayouts.iso_br[type](keyCode, fontSize, coords);
 };
  
-KB.glyphLayouts.europeanBR[KB.PRIME_PUSH] = function(keyCode,fontSize,coords) {
+KB.glyphLayouts.iso_br[KB.PRIME_PUSH] = function(keyCode,fontSize,coords) {
     var width = coords[1].x - coords[0].x,
         padding = fontSize*0.4;//width * 0.1;
         
@@ -261,7 +261,7 @@ KB.glyphLayouts.europeanBR[KB.PRIME_PUSH] = function(keyCode,fontSize,coords) {
         textBaseline: "bottom"
     };
 };
-KB.glyphLayouts.europeanBR[KB.SHIFT_PUSH] = function(keyCode,fontSize,coords) {
+KB.glyphLayouts.iso_br[KB.SHIFT_PUSH] = function(keyCode,fontSize,coords) {
     var width = coords[1].x - coords[0].x,
         padding = fontSize*0.4;//width * 0.1;
     return {
@@ -271,7 +271,7 @@ KB.glyphLayouts.europeanBR[KB.SHIFT_PUSH] = function(keyCode,fontSize,coords) {
         textBaseline: "top"
     };
 };
-KB.glyphLayouts.europeanBR[KB.ALTGR_PUSH] = function(keyCode,fontSize,coords) {
+KB.glyphLayouts.iso_br[KB.ALTGR_PUSH] = function(keyCode,fontSize,coords) {
     var width = coords[1].x - coords[0].x,
         padding = fontSize*0.4;//width * 0.1;
     return {
@@ -281,7 +281,7 @@ KB.glyphLayouts.europeanBR[KB.ALTGR_PUSH] = function(keyCode,fontSize,coords) {
         textBaseline: "bottom"
     };
 };
-KB.glyphLayouts.europeanBR[KB.SHIFT_ALTGR_PUSH] = function(keyCode,fontSize,coords) {
+KB.glyphLayouts.iso_br[KB.SHIFT_ALTGR_PUSH] = function(keyCode,fontSize,coords) {
     var width = coords[1].x - coords[0].x,
         padding = fontSize*0.4;//width * 0.1;
     return {
@@ -618,19 +618,19 @@ KB.keyMap.european.s683_225.split = false;
 })();
 
 
-// EuropeanBR keymap (ISO)
-KB.keyMap.europeanBR = {};
+// iso_br keymap (ISO)
+KB.keyMap.iso_br = {};
 
 // 50 pixels = 1.9cm
 // 26.315789 pixels = 1cm
-KB.keyMap.europeanBR.s683_225 = {};
-KB.keyMap.europeanBR.s683_225.width = 15*50 + 4;//756
-KB.keyMap.europeanBR.s683_225.height = 5*50 + 2;//254
-KB.keyMap.europeanBR.s683_225.pixelsPerCm = 26.315789;
-KB.keyMap.europeanBR.s683_225.split = false;
+KB.keyMap.iso_br.s683_225 = {};
+KB.keyMap.iso_br.s683_225.width = 15*50 + 4;//756
+KB.keyMap.iso_br.s683_225.height = 5*50 + 2;//254
+KB.keyMap.iso_br.s683_225.pixelsPerCm = 26.315789;
+KB.keyMap.iso_br.s683_225.split = false;
 (function() {
     var ii,
-        km = KB.keyMap.europeanBR.s683_225,
+        km = KB.keyMap.iso_br.s683_225,
         normKeySize = 50,
         row,
         keyCount = [14,14,13,14,8],

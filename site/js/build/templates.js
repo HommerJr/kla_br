@@ -168,11 +168,11 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "            <div class='controls'>\n" +
     "                <button class=\"btn btn-large\" type=\"button\"\n" +
     "                    ng-click=\"generateOutput()\"\n" +
-    "                    title=\"See which layout is best (Ctrl+Enter)\">Run</button>\n" +
+    "                    title=\"See which layout is best (Ctrl+Enter)\">Analisar</button>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "        <h1>Layouts</h1>\n" +
-    "        <p class=\"lead\"><strong>Click</strong> or <strong>Drag</strong> the keys on the keyboard below<p>\n" +
+    "        <p class=\"lead\"><strong>Click</strong> ou <strong>Arraste</strong> as teclas abaixo:<p>\n" +
     "    </div>\n" +
     "    <p></p>\n" +
     "\n" +
@@ -188,7 +188,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "        <div class=\"kb-config-table\">\n" +
     "            <form class=\"form-horizontal form-inline\">\n" +
     "                <div class=\"control-group\">\n" +
-    "                    <label class='control-label' for=\"kb-config-name\">Name:</label>\n" +
+    "                    <label class='control-label' for=\"kb-config-name\">Nome:</label>\n" +
     "                    <div class=\"controls\">\n" +
     "                        <input id=\"kb-config-name\" class=\"kb-config-name\" type=\"text\" ng-model=\"keyboards.getLayout(current).keySet.label\"/>\n" +
     "                        <select class=\"span2\"\n" +
@@ -196,7 +196,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                                ng-change=\"keyboards.convertType(current)\">\n" +
     "                            <option value=\"standard\">ANSI</option>\n" +
     "                            <option value=\"european\">ISO</option>\n" +
-    "                            <option value=\"europeanBR\">ISOBR</option>\n" +
+    "                            <option value=\"iso_br\">ISO ABNT2</option>\n" +
     "                            <option value=\"european_ss\">ISO split-space</option>\n" +
     "                            <option value=\"matrix\">Matrix</option>\n" +
     "                            <option value=\"ergodox\">Ergodox</option>\n" +
@@ -204,7 +204,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                    </div>\n" +
     "                </div>\n" +
     "                <div class=\"control-group\">\n" +
-    "                    <label class='control-label'>Author:</label>\n" +
+    "                    <label class='control-label'>Autor:</label>\n" +
     "                    <div class=\"controls\">\n" +
     "                        <label ng-hide='keyboards.getLayout(current).keySet.author'>Unknown</label>\n" +
     "                        <label ng-show='keyboards.getLayout(current).keySet.author'>\n" +
@@ -218,7 +218,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                                ng-show='keyboards.getLayout(current).keySet.moreInfoUrl'>\n" +
     "                            <a href='{{keyboards.getLayout(current).keySet.moreInfoUrl}}'\n" +
     "                                    title='{{keyboards.getLayout(current).keySet.moreInfoText}}'>\n" +
-    "                                More Info\n" +
+    "                                Mais info\n" +
     "                            </a>\n" +
     "                        </span>\n" +
     "                    </div>\n" +
@@ -231,7 +231,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "        <div class=\"kb-load-save-table\">\n" +
     "            <form class='form-horizontal form-inline'>\n" +
     "                <div class='control-group'>\n" +
-    "                    <label class='control-label'>Load/Save Data:</label>\n" +
+    "                    <label class='control-label'>Carregar/Salvar:</label>\n" +
     "                    <div class='controls'>\n" +
     "                        <div class=\"btn-group dropdown\">\n" +
     "                            <a id=\"kb-config-copy\" class=\"btn\" ng-click=\"copyJson()\" title=\"Copy this layout to clipboard (Ctrl+C)\">Copy</a>\n" +
@@ -259,135 +259,135 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                    </div>\n" +
     "                </div>\n" +
     "\n" +
-    "                <div class='control-group'>\n" +
-    "                    <!-- <label class='control-label' for=\"kb-config-select-list\">Preset:</label> -->\n" +
-    "                    <div class='controls'>\n" +
-    "                        <select id=\"kb-config-select-list\" ng-model=\"data.layoutPreset\">\n" +
-    "                            <option value=\"none\">[Select Preset]</option>\n" +
-    "                            <option value=\"default.set\">Default Set</option>\n" +
-    "                            <option value=\"famous.set\">Famous Latin Layouts</option>\n" +
-    "                            <option value=\"standard.tarmak.set\">Tarmak Set</option>\n" +
-    "                            <option value=\"standard.tarmak_dh.set\">Tarmak-DH Set</option>\n" +
-    "                            <option value=\"european.tarmak_dh.set\">Tarmak-DH ISO Set</option>\n" +
-    "                            <option value=\"standard.russian-alternatives.set\">Russian Layouts</option>\n" +
-    "                            <optgroup label=\"Latin: ANSI Keyboards\">\n" +
-    "                                <option value=\"standard.abcdef\">ABCDEF</option>\n" +
-    "                                <option value=\"standard.arensito\">Arensito</option>\n" +
-    "                                <option value=\"standard.adnw\">AdnW</option>\n" +
-    "                                <option value=\"standard.asset\">Asset</option>\n" +
-    "                                <option value=\"standard.capewell\">Capewell</option>\n" +
-    "                                <option value=\"standard.carpalxq\">CarpalxQ</option>\n" +
-    "                                <option value=\"standard.colemak\">Colemak</option>\n" +
-    "                                <option value=\"standard.colemak_dh\">Colemak-DH (Mod-DH)</option>\n" +
-    "                                <option value=\"standard.simplifiedDvorak\">Dvorak (Simplified)</option>\n" +
-    "                                <option value=\"standard.programmerDvorak\">Dvorak (Programmer)</option>\n" +
-    "                                <option value=\"standard.spanish-dvorak\">Dvorak (Spanish)</option>\n" +
-    "                                <option value=\"standard.ohdvorakl\">One-handed Dvorak (Left)</option>\n" +
-    "                                <option value=\"standard.ohdvorakr\">One-handed Dvorak (Right)</option>\n" +
-    "                                <option value=\"standard.klausler\">Klausler</option>\n" +
-    "                                <option value=\"standard.minimak8key\">Minimak 8-key</option>\n" +
-    "                                <option value=\"standard.minimak12key\">Minimak 12-key</option>\n" +
-    "                                <option value=\"standard.mtgap\">MTGAP</option>\n" +
-    "                                <option value=\"standard.neo2\">Neo 2 (v1)</option>\n" +
-    "                                <option value=\"standard.neo2_new\">Neo 2 (v2)</option>\n" +
-    "                                <option value=\"standard.niro\">Niro</option>\n" +
-    "                                <option value=\"standard.norman\">Norman</option>\n" +
-    "                                <option value=\"standard.qgmlwy\">QGMLWY</option>\n" +
-    "                                <option value=\"standard.qwerfj\">QWERFJ</option>\n" +
-    "                                <option value=\"standard.qwerty\">QWERTY</option>\n" +
-    "                                <option value=\"standard.qwertywm\">QWERTY – Wide Mod</option>\n" +
-    "                                <option value=\"standard.qwpr\">QWPR</option>\n" +
-    "                                <option value=\"standard.soul\">Soul</option>\n" +
-    "                                <option value=\"standard.tnwmlc\">TNWMLC (Worst CarpalX layout)</option>\n" +
-    "                                <option value=\"standard.workman\">Workman</option>\n" +
-    "                            </optgroup>\n" +
-    "                            <optgroup label=\"Latin: ISO Keyboards\">\n" +
-    "                                <option value=\"european.azerty\">AZERTY</option>\n" +
-    "                                <option value=\"european.bepo\">BÉPO</option>\n" +
-    "                                <option value=\"european.colemak\">Colemak</option>\n" +
-    "                                <option value=\"european_ss.colemak\">Colemak split-space</option>\n" +
-    "                                <option value=\"european.colemak_dh\">Colemak-DH (Mod-DH)</option>\n" +
-    "                                <option value=\"european_ss.colemak_dh\">Colemak-DH (Mod-DH) split-space</option>\n" +
-    "                                <option value=\"european.qwerty\">QWERTY</option>\n" +
-    "                                <option value=\"european_ss.qwerty\">QWERTY split-space</option>\n" +
-    "                                <option value=\"european.qwerty-spanish\">QWERTY (Spanish)</option>\n" +
-    "                                <option value=\"european.qwerty-estonian\">QWERTY (Estonian)</option>\n" +
-    "                            </optgroup>\n" +
-    "                            <optgroup label=\"Latin: Matrix Keyboards\">\n" +
-    "                                <option value=\"matrix.colemak\">Colemak</option>\n" +
-    "                                <option value=\"matrix.colemak_dh\">Colemak-DH (Mod-DH)</option>\n" +
-    "                                <option value=\"matrix.dvorak\">Dvorak</option>\n" +
-    "                                <option value=\"matrix.norman\">Norman</option>\n" +
-    "                                <option value=\"matrix.qwerty\">QWERTY</option>\n" +
-    "                                <option value=\"matrix.workman\">Workman</option>\n" +
-    "                            </optgroup>\n" +
-    "                            <optgroup label=\"Latin: Ergodox Keyboards\">\n" +
-    "                                <option value=\"ergodox.colemak\">Colemak</option>\n" +
-    "                                <option value=\"ergodox.colemak-thumbshift\">Colemak thumbshift</option>\n" +
-    "                                <option value=\"ergodox.kinesis-advantage-colemak\">Colemak (Kinesis Advantage)</option>\n" +
-    "                                <option value=\"ergodox.colemak_dh\">Colemak-DH (Mod-DH) thumbshift</option>\n" +
-    "                                <option value=\"ergodox.maltron\">Maltron</option>\n" +
-    "                                <option value=\"ergodox.mtgap\">MTGAP</option>\n" +
-    "                                <option value=\"ergodox.mtgap-thumbshift\">MTGAP thumbshift</option>\n" +
-    "                                <option value=\"ergodox.norman\">Norman</option>\n" +
-    "                                <option value=\"ergodox.qgmlwbcub\">QGMLWB</option>\n" +
-    "                                <option value=\"ergodox.qgmlwycub\">QGMLWY</option>\n" +
-    "                                <option value=\"ergodox.qwerty\">QWERTY</option>\n" +
-    "                                <option value=\"ergodox.qwerty-thumbshift\">QWERTY thumbshift</option>\n" +
-    "                                <option value=\"ergodox.rsthd\">RSTHD</option>\n" +
-    "                                <option value=\"ergodox.workman\">Workman</option>\n" +
-    "                            </optgroup>\n" +
-    "                            <optgroup label=\"Cyrillic\">\n" +
-    "                                <option value=\"standard.bulgarian\">Bulgarian</option>\n" +
-    "                                <option value=\"standard.russian_diktor\">Diktor</option>\n" +
-    "                                <option value=\"standard.russian_zubachev\">Zubachev</option>\n" +
-    "                                <option value=\"standard.russian\">ЙЦУКЕН</option>\n" +
-    "                                <option value=\"standard.russiannm\">ЙЦУКЕН – Narrow Mod</option>\n" +
-    "                                <option value=\"standard.russian_typewriter\">ЙЦУКЕН (Typewriter)</option>\n" +
-    "                                <option value=\"standard.russian_typographic\">ЙЦУКЕН (Typographic)</option>\n" +
-    "                                <option value=\"standard.russian_yvam-told-2\">ЫВАМ ТОЛД 2.0</option>\n" +
-    "                            </optgroup>\n" +
-    "                            <optgroup label=\"Fingerings\">\n" +
-    "                                <option value=\"standard.classical.fingering\">ANSI: Classical</option>\n" +
-    "                                <option value=\"standard.classical-wide.fingering\">ANSI: Classical Wide</option>\n" +
-    "                                <option value=\"standard.colemak_dh.fingering\">ANSI: Colemak-DH</option>\n" +
-    "                                <option value=\"standard.diktor.fingering\">ANSI: Diktor</option>\n" +
-    "                                <option value=\"standard.shift-up.fingering\">ANSI: Shift Up</option>\n" +
-    "                                <option value=\"standard.symmetric-typing-project.fingering\">ANSI: Symmetric Typing Project</option>\n" +
-    "                                <option value=\"standard.untangled.fingering\">ANSI: Untangled</option>\n" +
-    "                                <option value=\"european.classical.fingering\">ISO: Classical</option>\n" +
-    "                                <option value=\"european.colemak_dh.fingering\">ISO: Colemak-DH</option>\n" +
-    "                                <option value=\"european_ss.classical.fingering\">ISO split-space: Classical</option>\n" +
-    "                                <option value=\"european_ss.colemak_dh.fingering\">ISO split-space: Colemak-DH</option>\n" +
-    "                            </optgroup>\n" +
-    "                        </select>\n" +
-    "                        <div class=\"btn-group dropdown\">\n" +
-    "                            <a class=\"kb-config-load btn\" ng-click=\"loadLayout('all')\"\n" +
-    "                                    title=\"Load preset in place of current layout or whole set (Enter)\"\n" +
-    "                                    ng-disabled=\"data.layoutPreset=='none'\">Load</a>\n" +
-    "                            <button type=\"button\" class=\"btn dropdown-toggle dropdown-toggle-split\"\n" +
-    "                                    data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"\n" +
-    "                                    ng-disabled=\"data.layoutPreset=='none'||data.layoutPreset.slice(-4)=='.set'||data.layoutPreset.slice(-10)=='.fingering'\">\n" +
-    "                                <span class=\"caret\"></span>\n" +
-    "                            </button>\n" +
-    "                            <ul class=\"dropdown-menu\">\n" +
-    "                                <li><a ng-click=\"loadLayout('non-letters')\">Load Non-Letters</a></li>\n" +
-    "                                <li><a ng-click=\"loadLayout('altGr')\">Load “Alt Gr” Layer</a></li>\n" +
-    "                            </ul>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "<!--\n" +
-    "                <div class='control-group'>\n" +
-    "                    <label class='control-label'>Share:</label>\n" +
-    "                    <div class='controls'>\n" +
-    "                        <button class=\"btn\" ng-click=\"submitDialog()\">Submit Layout</button>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "-->\n" +
-    "            </form>\n" +
-    "        </div>\n" +
-    "\n" +
+    // "                <div class='control-group'>\n" +
+    // "                    <!-- <label class='control-label' for=\"kb-config-select-list\">Preset:</label> -->\n" +
+    // "                    <div class='controls'>\n" +
+    // "                        <select id=\"kb-config-select-list\" ng-model=\"data.layoutPreset\">\n" +
+    // "                            <option value=\"none\">[Select Preset]</option>\n" +
+    // "                            <option value=\"default.set\">Default Set</option>\n" +
+    // "                            <option value=\"famous.set\">Famous Latin Layouts</option>\n" +
+    // "                            <option value=\"standard.tarmak.set\">Tarmak Set</option>\n" +
+    // "                            <option value=\"standard.tarmak_dh.set\">Tarmak-DH Set</option>\n" +
+    // "                            <option value=\"european.tarmak_dh.set\">Tarmak-DH ISO Set</option>\n" +
+    // "                            <option value=\"standard.russian-alternatives.set\">Russian Layouts</option>\n" +
+    // "                            <optgroup label=\"Latin: ANSI Keyboards\">\n" +
+    // "                                <option value=\"standard.abcdef\">ABCDEF</option>\n" +
+    // "                                <option value=\"standard.arensito\">Arensito</option>\n" +
+    // "                                <option value=\"standard.adnw\">AdnW</option>\n" +
+    // "                                <option value=\"standard.asset\">Asset</option>\n" +
+    // "                                <option value=\"standard.capewell\">Capewell</option>\n" +
+    // "                                <option value=\"standard.carpalxq\">CarpalxQ</option>\n" +
+    // "                                <option value=\"standard.colemak\">Colemak</option>\n" +
+    // "                                <option value=\"standard.colemak_dh\">Colemak-DH (Mod-DH)</option>\n" +
+    // "                                <option value=\"standard.simplifiedDvorak\">Dvorak (Simplified)</option>\n" +
+    // "                                <option value=\"standard.programmerDvorak\">Dvorak (Programmer)</option>\n" +
+    // "                                <option value=\"standard.spanish-dvorak\">Dvorak (Spanish)</option>\n" +
+    // "                                <option value=\"standard.ohdvorakl\">One-handed Dvorak (Left)</option>\n" +
+    // "                                <option value=\"standard.ohdvorakr\">One-handed Dvorak (Right)</option>\n" +
+    // "                                <option value=\"standard.klausler\">Klausler</option>\n" +
+    // "                                <option value=\"standard.minimak8key\">Minimak 8-key</option>\n" +
+    // "                                <option value=\"standard.minimak12key\">Minimak 12-key</option>\n" +
+    // "                                <option value=\"standard.mtgap\">MTGAP</option>\n" +
+    // "                                <option value=\"standard.neo2\">Neo 2 (v1)</option>\n" +
+    // "                                <option value=\"standard.neo2_new\">Neo 2 (v2)</option>\n" +
+    // "                                <option value=\"standard.niro\">Niro</option>\n" +
+    // "                                <option value=\"standard.norman\">Norman</option>\n" +
+    // "                                <option value=\"standard.qgmlwy\">QGMLWY</option>\n" +
+    // "                                <option value=\"standard.qwerfj\">QWERFJ</option>\n" +
+    // "                                <option value=\"standard.qwerty\">QWERTY</option>\n" +
+    // "                                <option value=\"standard.qwertywm\">QWERTY – Wide Mod</option>\n" +
+    // "                                <option value=\"standard.qwpr\">QWPR</option>\n" +
+    // "                                <option value=\"standard.soul\">Soul</option>\n" +
+    // "                                <option value=\"standard.tnwmlc\">TNWMLC (Worst CarpalX layout)</option>\n" +
+    // "                                <option value=\"standard.workman\">Workman</option>\n" +
+    // "                            </optgroup>\n" +
+    // "                            <optgroup label=\"Latin: ISO Keyboards\">\n" +
+    // "                                <option value=\"european.azerty\">AZERTY</option>\n" +
+    // "                                <option value=\"european.bepo\">BÉPO</option>\n" +
+    // "                                <option value=\"european.colemak\">Colemak</option>\n" +
+    // "                                <option value=\"european_ss.colemak\">Colemak split-space</option>\n" +
+    // "                                <option value=\"european.colemak_dh\">Colemak-DH (Mod-DH)</option>\n" +
+    // "                                <option value=\"european_ss.colemak_dh\">Colemak-DH (Mod-DH) split-space</option>\n" +
+    // "                                <option value=\"european.qwerty\">QWERTY</option>\n" +
+    // "                                <option value=\"european_ss.qwerty\">QWERTY split-space</option>\n" +
+    // "                                <option value=\"european.qwerty-spanish\">QWERTY (Spanish)</option>\n" +
+    // "                                <option value=\"european.qwerty-estonian\">QWERTY (Estonian)</option>\n" +
+    // "                            </optgroup>\n" +
+    // "                            <optgroup label=\"Latin: Matrix Keyboards\">\n" +
+    // "                                <option value=\"matrix.colemak\">Colemak</option>\n" +
+    // "                                <option value=\"matrix.colemak_dh\">Colemak-DH (Mod-DH)</option>\n" +
+    // "                                <option value=\"matrix.dvorak\">Dvorak</option>\n" +
+    // "                                <option value=\"matrix.norman\">Norman</option>\n" +
+    // "                                <option value=\"matrix.qwerty\">QWERTY</option>\n" +
+    // "                                <option value=\"matrix.workman\">Workman</option>\n" +
+    // "                            </optgroup>\n" +
+    // "                            <optgroup label=\"Latin: Ergodox Keyboards\">\n" +
+    // "                                <option value=\"ergodox.colemak\">Colemak</option>\n" +
+    // "                                <option value=\"ergodox.colemak-thumbshift\">Colemak thumbshift</option>\n" +
+    // "                                <option value=\"ergodox.kinesis-advantage-colemak\">Colemak (Kinesis Advantage)</option>\n" +
+    // "                                <option value=\"ergodox.colemak_dh\">Colemak-DH (Mod-DH) thumbshift</option>\n" +
+    // "                                <option value=\"ergodox.maltron\">Maltron</option>\n" +
+    // "                                <option value=\"ergodox.mtgap\">MTGAP</option>\n" +
+    // "                                <option value=\"ergodox.mtgap-thumbshift\">MTGAP thumbshift</option>\n" +
+    // "                                <option value=\"ergodox.norman\">Norman</option>\n" +
+    // "                                <option value=\"ergodox.qgmlwbcub\">QGMLWB</option>\n" +
+    // "                                <option value=\"ergodox.qgmlwycub\">QGMLWY</option>\n" +
+    // "                                <option value=\"ergodox.qwerty\">QWERTY</option>\n" +
+    // "                                <option value=\"ergodox.qwerty-thumbshift\">QWERTY thumbshift</option>\n" +
+    // "                                <option value=\"ergodox.rsthd\">RSTHD</option>\n" +
+    // "                                <option value=\"ergodox.workman\">Workman</option>\n" +
+    // "                            </optgroup>\n" +
+    // "                            <optgroup label=\"Cyrillic\">\n" +
+    // "                                <option value=\"standard.bulgarian\">Bulgarian</option>\n" +
+    // "                                <option value=\"standard.russian_diktor\">Diktor</option>\n" +
+    // "                                <option value=\"standard.russian_zubachev\">Zubachev</option>\n" +
+    // "                                <option value=\"standard.russian\">ЙЦУКЕН</option>\n" +
+    // "                                <option value=\"standard.russiannm\">ЙЦУКЕН – Narrow Mod</option>\n" +
+    // "                                <option value=\"standard.russian_typewriter\">ЙЦУКЕН (Typewriter)</option>\n" +
+    // "                                <option value=\"standard.russian_typographic\">ЙЦУКЕН (Typographic)</option>\n" +
+    // "                                <option value=\"standard.russian_yvam-told-2\">ЫВАМ ТОЛД 2.0</option>\n" +
+    // "                            </optgroup>\n" +
+    // "                            <optgroup label=\"Fingerings\">\n" +
+    // "                                <option value=\"standard.classical.fingering\">ANSI: Classical</option>\n" +
+    // "                                <option value=\"standard.classical-wide.fingering\">ANSI: Classical Wide</option>\n" +
+    // "                                <option value=\"standard.colemak_dh.fingering\">ANSI: Colemak-DH</option>\n" +
+    // "                                <option value=\"standard.diktor.fingering\">ANSI: Diktor</option>\n" +
+    // "                                <option value=\"standard.shift-up.fingering\">ANSI: Shift Up</option>\n" +
+    // "                                <option value=\"standard.symmetric-typing-project.fingering\">ANSI: Symmetric Typing Project</option>\n" +
+    // "                                <option value=\"standard.untangled.fingering\">ANSI: Untangled</option>\n" +
+    // "                                <option value=\"european.classical.fingering\">ISO: Classical</option>\n" +
+    // "                                <option value=\"european.colemak_dh.fingering\">ISO: Colemak-DH</option>\n" +
+    // "                                <option value=\"european_ss.classical.fingering\">ISO split-space: Classical</option>\n" +
+    // "                                <option value=\"european_ss.colemak_dh.fingering\">ISO split-space: Colemak-DH</option>\n" +
+    // "                            </optgroup>\n" +
+    // "                        </select>\n" +
+    // "                        <div class=\"btn-group dropdown\">\n" +
+    // "                            <a class=\"kb-config-load btn\" ng-click=\"loadLayout('all')\"\n" +
+    // "                                    title=\"Load preset in place of current layout or whole set (Enter)\"\n" +
+    // "                                    ng-disabled=\"data.layoutPreset=='none'\">Load</a>\n" +
+    // "                            <button type=\"button\" class=\"btn dropdown-toggle dropdown-toggle-split\"\n" +
+    // "                                    data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"\n" +
+    // "                                    ng-disabled=\"data.layoutPreset=='none'||data.layoutPreset.slice(-4)=='.set'||data.layoutPreset.slice(-10)=='.fingering'\">\n" +
+    // "                                <span class=\"caret\"></span>\n" +
+    // "                            </button>\n" +
+    // "                            <ul class=\"dropdown-menu\">\n" +
+    // "                                <li><a ng-click=\"loadLayout('non-letters')\">Load Non-Letters</a></li>\n" +
+    // "                                <li><a ng-click=\"loadLayout('altGr')\">Load “Alt Gr” Layer</a></li>\n" +
+    // "                            </ul>\n" +
+    // "                        </div>\n" +
+    // "                    </div>\n" +
+    // "                </div>\n" +
+    // "<!--\n" +
+    // "                <div class='control-group'>\n" +
+    // "                    <label class='control-label'>Share:</label>\n" +
+    // "                    <div class='controls'>\n" +
+    // "                        <button class=\"btn\" ng-click=\"submitDialog()\">Submit Layout</button>\n" +
+    // "                    </div>\n" +
+    // "                </div>\n" +
+    // "-->\n" +
+    // "            </form>\n" +
+    // "        </div>\n" +
+    // "\n" +
     "        <!-- import modal -->\n" +
     "        <div id='kb-config-import-dialog' class='modal hide fade' tabindex='-1' role='dialog' aria-labelledby='resultLabel' aria-hidden='true'>\n" +
     "            <div class='modal-header'>\n" +
@@ -451,7 +451,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "            <div class='modal-body'>\n" +
     "                <form class='form-horizontal' ng-show='!submitter.submitting'>\n" +
     "                    <div class='control-group'>\n" +
-    "                        <label class='control-label' for='sub-name'>Name:</label>\n" +
+    "                        <label class='control-label' for='sub-name'>Nome:</label>\n" +
     "                        <div class='controls'>\n" +
     "                            <input id='sub-name' class='input-block-level' type='text' ng-model='submitter.name'>\n" +
     "                        </div>\n" +
@@ -516,7 +516,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "            <div class='controls'>\n" +
     "                <button class=\"btn btn-large\" type=\"button\"\n" +
     "                    ng-click=\"generateOutput()\"\n" +
-    "                    title=\"See which layout is best (Ctrl+Enter)\">Run</button>\n" +
+    "                    title=\"See which layout is best (Ctrl+Enter)\">Analisar</button>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "        <h1>Analyzer</h1>\n" +

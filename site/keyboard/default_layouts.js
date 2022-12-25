@@ -11,7 +11,7 @@ var KB = KB || {}; // define namespace
 KB.keySet = {};
 KB.keySet.standard = {};
 KB.keySet.european = {};
-KB.keySet.europeanBR = {};
+KB.keySet.iso_br = {};
 KB.keySet.european_ss = {};
 KB.keySet.ergodox = {};
 KB.keySet.matrix = {};
@@ -182,7 +182,7 @@ KB.keySet.european.inital = {
 
 
 
-KB.keySet.europeanBR.inital = {
+KB.keySet.iso_br.inital = {
     label: "",
     author: "",
     moreInfoUrl: "",
@@ -192,7 +192,7 @@ KB.keySet.europeanBR.inital = {
         6: 57, 7: 35, 8: 36, 9: 37, 10: 38,
         11: 57
     },
-    keyboardType: "europeanBR",
+    keyboardType: "iso_br",
     keys: [
         { id: 0, finger: KB.finger.LEFT_PINKY },
         { id: 1, finger: KB.finger.LEFT_PINKY },
@@ -1481,6 +1481,399 @@ KB.keySet.european.colemak = {
     ]
 }
 
+
+// ----------------------------------------------------------------------------
+// european Colemak
+// ----------------------------------------------------------------------------
+
+KB.keySet.iso_br.colemak = {
+    "label": "Colemak",
+    "author": "Shai Coleman",
+    "moreInfoUrl": "https://colemak.com/",
+    "moreInfoText": "Colemak",
+    "fingerStart": {
+        "1": 29,
+        "2": 30,
+        "3": 31,
+        "4": 32,
+        "5": 58,
+        "6": 58,
+        "7": 35,
+        "8": 36,
+        "9": 37,
+        "10": 38,
+        "11": 58,
+        "false": -1
+    },
+    "keyboardType": "iso_br",
+    "keys": [
+        {
+            "primary": 96,
+            "shift": 172,
+            "finger": 1,
+            "id": 0
+        },
+        {
+            "primary": 49,
+            "shift": 33,
+            "finger": 1,
+            "id": 1
+        },
+        {
+            "primary": 50,
+            "shift": 34,
+            "finger": 2,
+            "id": 2
+        },
+        {
+            "primary": 51,
+            "shift": 163,
+            "finger": 2,
+            "id": 3
+        },
+        {
+            "primary": 52,
+            "shift": 36,
+            "finger": 3,
+            "id": 4
+        },
+        {
+            "primary": 53,
+            "shift": 37,
+            "finger": 4,
+            "id": 5
+        },
+        {
+            "primary": 54,
+            "shift": 94,
+            "finger": 4,
+            "id": 6
+        },
+        {
+            "primary": 55,
+            "shift": 38,
+            "finger": 7,
+            "id": 7
+        },
+        {
+            "primary": 56,
+            "shift": 42,
+            "finger": 8,
+            "id": 8
+        },
+        {
+            "primary": 57,
+            "shift": 40,
+            "finger": 9,
+            "id": 9
+        },
+        {
+            "primary": 48,
+            "shift": 41,
+            "finger": 9,
+            "id": 10
+        },
+        {
+            "primary": 45,
+            "shift": 95,
+            "finger": 10,
+            "id": 11
+        },
+        {
+            "primary": 61,
+            "shift": 43,
+            "finger": 10,
+            "id": 12
+        },
+        {
+            "primary": 8,
+            "finger": 10,
+            "id": 13
+        },
+        {
+            "primary": 9,
+            "finger": 1,
+            "id": 14
+        },
+        {
+            "primary": 113,
+            "shift": 81,
+            "finger": 1,
+            "id": 15
+        },
+        {
+            "primary": 119,
+            "shift": 87,
+            "finger": 2,
+            "id": 16
+        },
+        {
+            "primary": 102,
+            "shift": 70,
+            "finger": 3,
+            "id": 17
+        },
+        {
+            "primary": 112,
+            "shift": 80,
+            "finger": 4,
+            "id": 18
+        },
+        {
+            "primary": 103,
+            "shift": 71,
+            "finger": 4,
+            "id": 19
+        },
+        {
+            "primary": 106,
+            "shift": 74,
+            "finger": 7,
+            "id": 20
+        },
+        {
+            "primary": 108,
+            "shift": 76,
+            "finger": 7,
+            "id": 21
+        },
+        {
+            "primary": 117,
+            "shift": 85,
+            "finger": 8,
+            "id": 22
+        },
+        {
+            "primary": 121,
+            "shift": 89,
+            "finger": 9,
+            "id": 23
+        },
+        {
+            "primary": 59,
+            "shift": 58,
+            "finger": 10,
+            "id": 24
+        },
+        {
+            "primary": 91,
+            "shift": 123,
+            "finger": 10,
+            "id": 25
+        },
+        {
+            "primary": 93,
+            "shift": 125,
+            "finger": 10,
+            "id": 26
+        },
+        {
+            "primary": 13,
+            "finger": 10,
+            "id": 27
+        },
+        {
+            "primary": 8,
+            "finger": 1,
+            "id": 28
+        },
+        {
+            "primary": 97,
+            "shift": 65,
+            "finger": 1,
+            "id": 29
+        },
+        {
+            "primary": 114,
+            "shift": 82,
+            "finger": 2,
+            "id": 30
+        },
+        {
+            "primary": 115,
+            "shift": 83,
+            "finger": 3,
+            "id": 31
+        },
+        {
+            "primary": 116,
+            "shift": 84,
+            "finger": 4,
+            "id": 32
+        },
+        {
+            "primary": 100,
+            "shift": 68,
+            "finger": 4,
+            "id": 33
+        },
+        {
+            "primary": 104,
+            "shift": 72,
+            "finger": 7,
+            "id": 34
+        },
+        {
+            "primary": 110,
+            "shift": 78,
+            "finger": 7,
+            "id": 35
+        },
+        {
+            "primary": 101,
+            "shift": 69,
+            "finger": 8,
+            "id": 36
+        },
+        {
+            "primary": 105,
+            "shift": 73,
+            "finger": 9,
+            "id": 37
+        },
+        {
+            "primary": 111,
+            "shift": 79,
+            "finger": 10,
+            "id": 38
+        },
+        {
+            "primary": 39,
+            "shift": 64,
+            "finger": 10,
+            "id": 39
+        },
+        {
+            "primary": 35,
+            "shift": 126,
+            "finger": 10,
+            "id": 40
+        },
+        {
+            "primary": 16,
+            "finger": 1,
+            "id": 41
+        },
+        {
+            "primary": 92,
+            "shift": 124,
+            "finger": 1,
+            "id": 42
+        },
+        {
+            "primary": 122,
+            "shift": 90,
+            "finger": 2,
+            "id": 43
+        },
+        {
+            "primary": 120,
+            "shift": 88,
+            "finger": 3,
+            "id": 44
+        },
+        {
+            "primary": 99,
+            "shift": 67,
+            "finger": 4,
+            "id": 45
+        },
+        {
+            "primary": 118,
+            "shift": 86,
+            "finger": 4,
+            "id": 46
+        },
+        {
+            "primary": 98,
+            "shift": 66,
+            "finger": 7,
+            "id": 47
+        },
+        {
+            "primary": 107,
+            "shift": 75,
+            "finger": 7,
+            "id": 48
+        },
+        {
+            "primary": 109,
+            "shift": 77,
+            "finger": 7,
+            "id": 49
+        },
+        {
+            "primary": 44,
+            "shift": 60,
+            "finger": 8,
+            "id": 50
+        },
+        {
+            "primary": 46,
+            "shift": 62,
+            "finger": 9,
+            "id": 51
+        },
+        {
+            "primary": 47,
+            "shift": 63,
+            "finger": 10,
+            "id": 52
+        },
+        {
+            "primary": "´",
+            "shift": "^",
+            "finger": 10,
+            "id": 53
+        },
+        {
+            "primary": -16,
+            "finger": 10,
+            "id": 54
+        },
+        {
+            "primary": 17,
+            "finger": 5,
+            "id": 55
+        },
+        {
+            "primary": -91,
+            "finger": 5,
+            "id": 56
+        },
+        {
+            "primary": 18,
+            "finger": 5,
+            "id": 57
+        },
+        {
+            "primary": 32,
+            "finger": 5,
+            "id": 58
+        },
+        {
+            "primary": -18,
+            "finger": 6,
+            "id": 59
+        },
+        {
+            "primary": -91,
+            "finger": 6,
+            "id": 60
+        },
+        {
+            "primary": -93,
+            "finger": 6,
+            "id": 61
+        },
+        {
+            "primary": 17,
+            "finger": 6,
+            "id": 62
+        }
+    ]
+}
+
 KB.keySet.european.colemak_dh = {
     "label": "Colemak-DH",
     "author": "SteveP",
@@ -1955,8 +2348,8 @@ KB.keySet.european.qwerty = {
 };
 
 
-KB.keySet.europeanBR.qwerty = {
-    label: "QWERTYBR",
+KB.keySet.iso_br.qwerty = {
+    label: "QWERTY ABNT2",
     author: "C. L. Sholes, E. Remington",
     moreInfoUrl: "http://en.wikipedia.org/wiki/Qwerty", 
     moreInfoText: "Wikipedia Entry",
@@ -1965,7 +2358,7 @@ KB.keySet.europeanBR.qwerty = {
       "2":30,
       "3":31,
       "4":32,
-      "5":57,
+      "5":58,
       "6":58,
       "7":35,
       "8":36,
@@ -1974,27 +2367,27 @@ KB.keySet.europeanBR.qwerty = {
       "11":58,
       "false":-1
    },
-    keyboardType: "europeanBR",
+    keyboardType: "iso_br",
     keys: [ 
-        {primary:"`",   shift:172,  finger:KB.finger.LEFT_PINKY},//0
-        {primary:"1",   shift:"!",  finger:KB.finger.LEFT_PINKY},//1
-        {primary:"2",   shift:"\"",  finger:KB.finger.LEFT_RING},//2
-        {primary:"3",   shift:163,  finger:KB.finger.LEFT_MIDDLE},//3
-        {primary:"4",   shift:"$",  finger:KB.finger.LEFT_INDEX},//4
-        {primary:"5",   shift:"%",  finger:KB.finger.LEFT_INDEX},//5
-        {primary:"6",   shift:"^",  finger:KB.finger.RIGHT_INDEX},//6
+        {primary:"'",   shift:'"',  finger:KB.finger.LEFT_PINKY},//0
+        {primary:"1",   shift:"!",  altGr:"¹",  finger:KB.finger.LEFT_PINKY},//1
+        {primary:"2",   shift:"@",  altGr:"²",  finger:KB.finger.LEFT_RING},//2
+        {primary:"3",   shift:"#",  altGr:"³",  finger:KB.finger.LEFT_RING},//3
+        {primary:"4",   shift:"$",  altGr:"£",  finger:KB.finger.LEFT_MIDDLE},//4
+        {primary:"5",   shift:"%",  altGr:"¢",  finger:KB.finger.LEFT_INDEX},//5
+        {primary:"6",   shift:"¨",  altGr:"¬",  finger:KB.finger.LEFT_INDEX},//6
         {primary:"7",   shift:"&",  finger:KB.finger.RIGHT_INDEX},//7
         {primary:"8",   shift:"*",  finger:KB.finger.RIGHT_MIDDLE},//8
         {primary:"9",   shift:"(",  finger:KB.finger.RIGHT_RING},//9
-        {primary:"0",   shift:")",  finger:KB.finger.RIGHT_PINKY},//10
+        {primary:"0",   shift:")",  finger:KB.finger.RIGHT_RING},//10
         {primary:"-",   shift:"_",  finger:KB.finger.RIGHT_PINKY},//11
-        {primary:"=",   shift:"+",  finger:KB.finger.RIGHT_PINKY},//12
+        {primary:"=",   shift:"+",  altGr:"§",  finger:KB.finger.RIGHT_PINKY},//12
         {primary:8,                 finger:KB.finger.RIGHT_PINKY},//13
     
         {primary:9,                 finger:KB.finger.LEFT_PINKY},//14
-        {primary:"q",   shift:"Q",  finger:KB.finger.LEFT_PINKY},//15
-        {primary:"w",   shift:"W",  finger:KB.finger.LEFT_RING},//16
-        {primary:"e",   shift:"E",  finger:KB.finger.LEFT_MIDDLE},//17
+        {primary:"q",   shift:"Q",  altGr:"/",  finger:KB.finger.LEFT_PINKY},//15
+        {primary:"w",   shift:"W",  altGr:"?",  finger:KB.finger.LEFT_RING},//16
+        {primary:"e",   shift:"E",  altGr:"€",  finger:KB.finger.LEFT_MIDDLE},//17
         {primary:"r",   shift:"R",  finger:KB.finger.LEFT_INDEX},//18
         {primary:"t",   shift:"T",  finger:KB.finger.LEFT_INDEX},//19
         {primary:"y",   shift:"Y",  finger:KB.finger.RIGHT_INDEX},//20
@@ -2002,8 +2395,8 @@ KB.keySet.europeanBR.qwerty = {
         {primary:"i",   shift:"I",  finger:KB.finger.RIGHT_MIDDLE},//22
         {primary:"o",   shift:"O",  finger:KB.finger.RIGHT_RING},//23
         {primary:"p",   shift:"P",  finger:KB.finger.RIGHT_PINKY},//24
-        {primary:"[",   shift:"{",  finger:KB.finger.RIGHT_PINKY},//25
-        {primary:"]",   shift:"}",  finger:KB.finger.RIGHT_PINKY},//26
+        {primary:"´",   shift:"`",  finger:KB.finger.RIGHT_PINKY},//25
+        {primary:"[",   shift:"{",  altGr:"ª",  finger:KB.finger.RIGHT_PINKY},//26
         {primary:"\r",  finger:KB.finger.RIGHT_PINKY},//27
         
         {primary:20,               finger:KB.finger.LEFT_PINKY},//28
@@ -2016,34 +2409,408 @@ KB.keySet.europeanBR.qwerty = {
         {primary:"j",  shift:"J",  finger:KB.finger.RIGHT_INDEX},//35
         {primary:"k",  shift:"K",  finger:KB.finger.RIGHT_MIDDLE},//36
         {primary:"l",  shift:"L",  finger:KB.finger.RIGHT_RING},//37
-        {primary:";",  shift:":",  finger:KB.finger.RIGHT_PINKY},//38
-        {primary:"'",  shift:"@",  finger:KB.finger.RIGHT_PINKY},//39
-        {primary:"#",  shift:"~",  finger:KB.finger.RIGHT_PINKY},//39
+        {primary:"ç",  shift:"Ç",  finger:KB.finger.RIGHT_PINKY},//38
+        {primary:"~",  shift:"^",  finger:KB.finger.RIGHT_PINKY},//39
+        {primary:"]",  shift:"}",  altGr:"º",  finger:KB.finger.RIGHT_PINKY},//40
         
         
         {primary:16,                finger:KB.finger.LEFT_PINKY},//41
-        {primary:"|",  shift:"\\", finger:KB.finger.LEFT_PINKY},//42
-        {primary:"z",  shift:"Z",  finger:KB.finger.LEFT_PINKY},//42
-        {primary:"x",  shift:"X",  finger:KB.finger.LEFT_RING},//43
-        {primary:"c",  shift:"C",  finger:KB.finger.LEFT_MIDDLE},//44
-        {primary:"v",  shift:"V",  finger:KB.finger.LEFT_INDEX},//45
-        {primary:"b",  shift:"B",  finger:KB.finger.LEFT_INDEX},//46
-        {primary:"n",  shift:"N",  finger:KB.finger.RIGHT_INDEX},//47
-        {primary:"m",  shift:"M",  finger:KB.finger.RIGHT_INDEX},//48
-        {primary:",",  shift:"<",  finger:KB.finger.RIGHT_MIDDLE},//49
-        {primary:".",  shift:">",  finger:KB.finger.RIGHT_RING},//50
-        {primary:"/",  shift:"?",  finger:KB.finger.RIGHT_PINKY},//51
-        {primary:"ç",  shift:"Ç",  finger:KB.finger.RIGHT_PINKY},//51 ---
-        {primary:16,               finger:KB.finger.RIGHT_PINKY},//52
+        {primary:"\\",  shift:"|", finger:KB.finger.LEFT_PINKY},//42
+        {primary:"z",  shift:"Z",  finger:KB.finger.LEFT_RING},//43
+        {primary:"x",  shift:"X",  finger:KB.finger.LEFT_MIDDLE},//44
+        {primary:"c",  shift:"C",  altGr:"₢",  finger:KB.finger.LEFT_INDEX},//45
+        {primary:"v",  shift:"V",  finger:KB.finger.LEFT_INDEX},//46
+        {primary:"b",  shift:"B",  finger:KB.finger.RIGHT_INDEX},//47
+        {primary:"n",  shift:"N",  finger:KB.finger.RIGHT_INDEX},//48
+        {primary:"m",  shift:"M",  finger:KB.finger.RIGHT_INDEX},//49
+        {primary:",",  shift:"<",  finger:KB.finger.RIGHT_MIDDLE},//50
+        {primary:".",  shift:">",  finger:KB.finger.RIGHT_RING},//51
+        {primary:";",  shift:":",  finger:KB.finger.RIGHT_PINKY},//52
+        {primary:"/",  shift:"?",  altGr:"°",  finger:KB.finger.RIGHT_PINKY},//53
+        {primary:16,               finger:KB.finger.RIGHT_PINKY},//54
         
-        {primary:17,               finger:KB.finger.LEFT_THUMB},//53
-        {primary:-91,              finger:KB.finger.LEFT_THUMB},//54
-        {primary:18,               finger:KB.finger.LEFT_THUMB},//55
-        {primary:" ",              finger:KB.finger.LEFT_THUMB},//56
-        {primary:-18,              finger:KB.finger.RIGHT_THUMB},//57
-        {primary:-91,              finger:KB.finger.RIGHT_THUMB},//58
-        {primary:-93,              finger:KB.finger.RIGHT_THUMB},//59
-        {primary:17,               finger:KB.finger.RIGHT_THUMB}//60
+        {primary:17,               finger:KB.finger.LEFT_THUMB},//55
+        {primary:-91,              finger:KB.finger.LEFT_THUMB},//56
+        {primary:18,               finger:KB.finger.LEFT_THUMB},//57
+        {primary:" ",              finger:KB.finger.LEFT_THUMB},//58
+        {primary:-18,              finger:KB.finger.RIGHT_THUMB},//59
+        {primary:-91,              finger:KB.finger.RIGHT_THUMB},//60
+        {primary:-93,              finger:KB.finger.RIGHT_THUMB},//61
+        {primary:17,               finger:KB.finger.RIGHT_THUMB}//62
+    ]
+};
+
+
+KB.keySet.iso_br.nativo = {
+    label: "Nativo BR",
+    author: "Ari Caldeira",
+    moreInfoUrl: "https://web.archive.org/web/20111128095157/http://tecladobrasileiro.laumi.org/index.php?option=com_frontpage&Itemid=1", 
+    moreInfoText: "Internet Archive",
+    "fingerStart":{
+        "1":29,
+        "2":30,
+        "3":31,
+        "4":32,
+        "5":58,
+        "6":58,
+        "7":35,
+        "8":36,
+        "9":37,
+        "10":38,
+        "11":58,
+        "false":-1
+     },
+      keyboardType: "iso_br",
+      keys: [ 
+        {primary:"=",   shift:"+",  altGr:"§",  finger:KB.finger.LEFT_PINKY},//0
+        {primary:"1",   shift:"!",  altGr:"¹",  finger:KB.finger.LEFT_PINKY},//1
+        {primary:"2",   shift:"@",  altGr:"²",  finger:KB.finger.LEFT_RING},//2
+        {primary:"3",   shift:"#",  altGr:"³",  finger:KB.finger.LEFT_RING},//3
+        {primary:"4",   shift:"$",  altGr:"£",  finger:KB.finger.LEFT_MIDDLE},//4
+        {primary:"5",   shift:"%",  altGr:"¢",  finger:KB.finger.LEFT_INDEX},//5
+        {primary:"6",   shift:"¨",  altGr:"¬",  finger:KB.finger.LEFT_INDEX},//6
+        {primary:"7",   shift:"&",  finger:KB.finger.RIGHT_INDEX},//7
+        {primary:"8",   shift:"*",  finger:KB.finger.RIGHT_MIDDLE},//8
+        {primary:"9",   shift:"(",  finger:KB.finger.RIGHT_RING},//9
+        {primary:"0",   shift:")",  finger:KB.finger.RIGHT_RING},//10
+        {primary:"[",   shift:"{",  altGr:"ª",  finger:KB.finger.RIGHT_PINKY},//11
+        {primary:"]",  shift:"}",  altGr:"º",  finger:KB.finger.RIGHT_PINKY},//12
+        {primary:8,                 finger:KB.finger.RIGHT_PINKY},//13
+        
+        {primary:9,                 finger:KB.finger.LEFT_PINKY},//14
+        {primary:"/",  shift:"?",  altGr:"°",  finger:KB.finger.LEFT_PINKY},//15
+        {primary:",",  shift:"<",  finger:KB.finger.LEFT_RING},//16
+        {primary:".",  shift:">",  finger:KB.finger.LEFT_MIDDLE},//17
+        {primary:"h",  shift:"H",  finger:KB.finger.LEFT_INDEX},//18
+        {primary:"x",  shift:"X",  finger:KB.finger.LEFT_INDEX},//19
+        {primary:"w",   shift:"W",  altGr:"?",  finger:KB.finger.RIGHT_INDEX},//20
+        {primary:"l",  shift:"L",  finger:KB.finger.RIGHT_INDEX},//21
+        {primary:"t",   shift:"T",  finger:KB.finger.RIGHT_MIDDLE},//22
+        {primary:"c",  shift:"C",  altGr:"₢",  finger:KB.finger.RIGHT_RING},//23
+        {primary:"p",   shift:"P",  finger:KB.finger.RIGHT_PINKY},//24
+        {primary:"~",  shift:"^",  finger:KB.finger.RIGHT_PINKY},//25
+        {primary:"-",   shift:"_",  finger:KB.finger.RIGHT_PINKY},//26
+        {primary:"\r",  finger:KB.finger.RIGHT_PINKY},//27
+        
+        {primary:20,               finger:KB.finger.LEFT_PINKY},//28
+        {primary:"i",   shift:"I",  finger:KB.finger.LEFT_PINKY},//29
+        {primary:"e",   shift:"E",  altGr:"€",  finger:KB.finger.LEFT_RING},//30
+        {primary:"a",  shift:"A",  finger:KB.finger.LEFT_MIDDLE},//31
+        {primary:"o",   shift:"O",  finger:KB.finger.LEFT_INDEX},//32
+        {primary:"u",   shift:"U",  finger:KB.finger.LEFT_INDEX},//33
+        {primary:"m",  shift:"M",  finger:KB.finger.RIGHT_INDEX},//34
+        {primary:"d",  shift:"D",  finger:KB.finger.RIGHT_INDEX},//35
+        {primary:"s",  shift:"S",  finger:KB.finger.RIGHT_MIDDLE},//36
+        {primary:"r",   shift:"R",  finger:KB.finger.RIGHT_RING},//37
+        {primary:"n",  shift:"N",  finger:KB.finger.RIGHT_PINKY},//38
+        {primary:"´",   shift:"`",  finger:KB.finger.RIGHT_PINKY},//39
+        {primary:"'",   shift:'"',  finger:KB.finger.RIGHT_PINKY},//40
+        
+        
+        {primary:16,                finger:KB.finger.LEFT_PINKY},//41
+        {primary:";",  shift:":",  finger:KB.finger.LEFT_PINKY},//42
+        {primary:"y",   shift:"Y",  finger:KB.finger.LEFT_RING},//43
+        {primary:"ç",  shift:"Ç",  finger:KB.finger.LEFT_MIDDLE},//44
+        {primary:"j",  shift:"J",  finger:KB.finger.LEFT_INDEX},//45
+        {primary:"b",  shift:"B",  finger:KB.finger.LEFT_INDEX},//46
+        {primary:"k",  shift:"K",  finger:KB.finger.RIGHT_INDEX},//47
+        {primary:"q",   shift:"Q",  altGr:"/",  finger:KB.finger.RIGHT_INDEX},//48
+        {primary:"v",  shift:"V",  finger:KB.finger.RIGHT_INDEX},//49
+        {primary:"g",  shift:"G",  finger:KB.finger.RIGHT_MIDDLE},//50
+        {primary:"f",  shift:"F",  finger:KB.finger.RIGHT_RING},//51
+        {primary:"z",  shift:"Z",  finger:KB.finger.RIGHT_PINKY},//52
+        {primary:"\\",  shift:"|", finger:KB.finger.RIGHT_PINKY},//53
+        {primary:16,               finger:KB.finger.RIGHT_PINKY},//54
+        
+        {primary:17,               finger:KB.finger.LEFT_THUMB},//55
+        {primary:-91,              finger:KB.finger.LEFT_THUMB},//56
+        {primary:18,               finger:KB.finger.LEFT_THUMB},//57
+        {primary:" ",              finger:KB.finger.LEFT_THUMB},//58
+        {primary:-18,              finger:KB.finger.RIGHT_THUMB},//59
+        {primary:-91,              finger:KB.finger.RIGHT_THUMB},//60
+        {primary:-93,              finger:KB.finger.RIGHT_THUMB},//61
+        {primary:17,               finger:KB.finger.RIGHT_THUMB}//62
+    ]
+};
+
+
+
+KB.keySet.iso_br.dvorak_br = {
+    label: "Dvorak BR",
+    author: "Nando Florestan",
+    moreInfoUrl: "http://dev.nando.audio/pages/teclado.html", 
+    moreInfoText: "Blog do Nando",
+    "fingerStart":{
+        "1":29,
+        "2":30,
+        "3":31,
+        "4":32,
+        "5":58,
+        "6":58,
+        "7":35,
+        "8":36,
+        "9":37,
+        "10":38,
+        "11":58,
+        "false":-1
+     },
+      keyboardType: "iso_br",
+      keys: [ 
+        {primary:"'",   shift:'"',  finger:KB.finger.LEFT_PINKY},//0
+        {primary:"1",   shift:"!",  altGr:"¹",  finger:KB.finger.LEFT_PINKY},//1
+        {primary:"2",   shift:"@",  altGr:"²",  finger:KB.finger.LEFT_RING},//2
+        {primary:"3",   shift:"#",  altGr:"³",  finger:KB.finger.LEFT_RING},//3
+        {primary:"4",   shift:"$",  altGr:"£",  finger:KB.finger.LEFT_MIDDLE},//4
+        {primary:"5",   shift:"%",  altGr:"¢",  finger:KB.finger.LEFT_INDEX},//5
+        {primary:"6",   shift:"¨",  altGr:"¬",  finger:KB.finger.LEFT_INDEX},//6
+        {primary:"7",   shift:"&",  finger:KB.finger.RIGHT_INDEX},//7
+        {primary:"8",   shift:"*",  finger:KB.finger.RIGHT_MIDDLE},//8
+        {primary:"9",   shift:"(",  finger:KB.finger.RIGHT_RING},//9
+        {primary:"0",   shift:")",  finger:KB.finger.RIGHT_RING},//10
+        {primary:"[",   shift:"{",  altGr:"ª",  finger:KB.finger.RIGHT_PINKY},//11
+        {primary:"]",  shift:"}",  altGr:"º",  finger:KB.finger.RIGHT_PINKY},//12
+        {primary:8,                 finger:KB.finger.RIGHT_PINKY},//13
+        
+        {primary:9,                 finger:KB.finger.LEFT_PINKY},//14
+        {primary:"/",  shift:"?",  altGr:"°",  finger:KB.finger.LEFT_PINKY},//15
+        {primary:",",  shift:"<",  finger:KB.finger.LEFT_RING},//16
+        {primary:".",  shift:">",  finger:KB.finger.LEFT_MIDDLE},//17
+        {primary:"p",   shift:"P",  finger:KB.finger.LEFT_INDEX},//18
+        {primary:"y",   shift:"Y",  finger:KB.finger.LEFT_INDEX},//19
+        {primary:"f",  shift:"F",  finger:KB.finger.RIGHT_INDEX},//20
+        {primary:"g",  shift:"G",  finger:KB.finger.RIGHT_INDEX},//21
+        {primary:"c",  shift:"C",  altGr:"₢",  finger:KB.finger.RIGHT_MIDDLE},//22
+        {primary:"r",   shift:"R",  finger:KB.finger.RIGHT_RING},//23
+        {primary:"l",  shift:"L",  finger:KB.finger.RIGHT_PINKY},//24
+        {primary:"´",   shift:"`",  finger:KB.finger.RIGHT_PINKY},//25
+        {primary:"=",   shift:"+",  altGr:"§",  finger:KB.finger.RIGHT_PINKY},//26
+        {primary:"\r",  finger:KB.finger.RIGHT_PINKY},//27
+        
+        {primary:20,               finger:KB.finger.LEFT_PINKY},//28
+        {primary:"a",  shift:"A",  finger:KB.finger.LEFT_PINKY},//29
+        {primary:"o",   shift:"O",  finger:KB.finger.LEFT_RING},//30
+        {primary:"e",   shift:"E",  altGr:"€",  finger:KB.finger.LEFT_MIDDLE},//31
+        {primary:"u",   shift:"U",  finger:KB.finger.LEFT_INDEX},//32
+        {primary:"i",   shift:"I",  finger:KB.finger.LEFT_INDEX},//33
+        {primary:"d",  shift:"D",  finger:KB.finger.RIGHT_INDEX},//34
+        {primary:"h",  shift:"H",  finger:KB.finger.RIGHT_INDEX},//35
+        {primary:"t",   shift:"T",  finger:KB.finger.RIGHT_MIDDLE},//36
+        {primary:"n",  shift:"N",  finger:KB.finger.RIGHT_RING},//37
+        {primary:"s",  shift:"S",  finger:KB.finger.RIGHT_PINKY},//38
+        {primary:"~",  shift:"^",  finger:KB.finger.RIGHT_PINKY},//39
+        {primary:"-",   shift:"_",  finger:KB.finger.RIGHT_PINKY},//40
+        
+        
+        {primary:16,                finger:KB.finger.LEFT_PINKY},//41
+        {primary:"ç",  shift:"Ç",  finger:KB.finger.LEFT_PINKY},//42
+        {primary:";",  shift:":",  finger:KB.finger.LEFT_RING},//43
+        {primary:"q",   shift:"Q",  altGr:"/",  finger:KB.finger.LEFT_MIDDLE},//44
+        {primary:"j",  shift:"J",  finger:KB.finger.LEFT_INDEX},//45
+        {primary:"k",  shift:"K",  finger:KB.finger.LEFT_INDEX},//46
+        {primary:"x",  shift:"X",  finger:KB.finger.RIGHT_INDEX},//47
+        {primary:"b",  shift:"B",  finger:KB.finger.RIGHT_INDEX},//48
+        {primary:"m",  shift:"M",  finger:KB.finger.RIGHT_INDEX},//49
+        {primary:"w",   shift:"W",  altGr:"?",  finger:KB.finger.RIGHT_MIDDLE},//50
+        {primary:"v",  shift:"V",  finger:KB.finger.RIGHT_RING},//51
+        {primary:"z",  shift:"Z",  finger:KB.finger.RIGHT_PINKY},//52
+        {primary:"\\",  shift:"|", finger:KB.finger.RIGHT_PINKY},//53
+        {primary:16,               finger:KB.finger.RIGHT_PINKY},//54
+        
+        {primary:17,               finger:KB.finger.LEFT_THUMB},//55
+        {primary:-91,              finger:KB.finger.LEFT_THUMB},//56
+        {primary:18,               finger:KB.finger.LEFT_THUMB},//57
+        {primary:" ",              finger:KB.finger.LEFT_THUMB},//58
+        {primary:-18,              finger:KB.finger.RIGHT_THUMB},//59
+        {primary:-91,              finger:KB.finger.RIGHT_THUMB},//60
+        {primary:-93,              finger:KB.finger.RIGHT_THUMB},//61
+        {primary:17,               finger:KB.finger.RIGHT_THUMB}//62
+    ]
+};
+
+
+
+KB.keySet.iso_br.colemak_br = {
+    label: "Colemak BR",
+    author: "Tadeu Jr",
+    moreInfoUrl: "http://tadeujr.com.br", 
+    moreInfoText: "Tadeu Jr",
+    "fingerStart":{
+        "1":29,
+        "2":30,
+        "3":31,
+        "4":32,
+        "5":58,
+        "6":58,
+        "7":35,
+        "8":36,
+        "9":37,
+        "10":38,
+        "11":58,
+        "false":-1
+     },
+      keyboardType: "iso_br",
+      keys: [ 
+        {primary:"'",   shift:'"',  finger:KB.finger.LEFT_PINKY},//0
+        {primary:"1",   shift:"!",  altGr:"¹",  finger:KB.finger.LEFT_PINKY},//1
+        {primary:"2",   shift:"@",  altGr:"²",  finger:KB.finger.LEFT_RING},//2
+        {primary:"3",   shift:"#",  altGr:"³",  finger:KB.finger.LEFT_RING},//3
+        {primary:"4",   shift:"$",  altGr:"£",  finger:KB.finger.LEFT_MIDDLE},//4
+        {primary:"5",   shift:"%",  altGr:"¢",  finger:KB.finger.LEFT_INDEX},//5
+        {primary:"6",   shift:"¨",  altGr:"¬",  finger:KB.finger.LEFT_INDEX},//6
+        {primary:"7",   shift:"&",  finger:KB.finger.RIGHT_INDEX},//7
+        {primary:"8",   shift:"*",  finger:KB.finger.RIGHT_MIDDLE},//8
+        {primary:"9",   shift:"(",  finger:KB.finger.RIGHT_RING},//9
+        {primary:"0",   shift:")",  finger:KB.finger.RIGHT_RING},//10
+        {primary:"-",   shift:"_",  finger:KB.finger.RIGHT_PINKY},//11
+        {primary:"=",   shift:"+",  altGr:"§",  finger:KB.finger.RIGHT_PINKY},//12
+        {primary:8,                 finger:KB.finger.RIGHT_PINKY},//13
+    
+        {primary:9,                 finger:KB.finger.LEFT_PINKY},//14
+        {primary:"q",   shift:"Q",  altGr:"/",  finger:KB.finger.LEFT_PINKY},//15
+        {primary:"w",   shift:"W",  altGr:"?",  finger:KB.finger.LEFT_RING},//16
+        {primary:"e",   shift:"E",  altGr:"€",  finger:KB.finger.LEFT_MIDDLE},//17
+        {primary:"r",   shift:"R",  finger:KB.finger.LEFT_INDEX},//18
+        {primary:"t",   shift:"T",  finger:KB.finger.LEFT_INDEX},//19
+        {primary:"y",   shift:"Y",  finger:KB.finger.RIGHT_INDEX},//20
+        {primary:"u",   shift:"U",  finger:KB.finger.RIGHT_INDEX},//21
+        {primary:"i",   shift:"I",  finger:KB.finger.RIGHT_MIDDLE},//22
+        {primary:"o",   shift:"O",  finger:KB.finger.RIGHT_RING},//23
+        {primary:"p",   shift:"P",  finger:KB.finger.RIGHT_PINKY},//24
+        {primary:"´",   shift:"`",  finger:KB.finger.RIGHT_PINKY},//25
+        {primary:"[",   shift:"{",  altGr:"ª",  finger:KB.finger.RIGHT_PINKY},//26
+        {primary:"\r",  finger:KB.finger.RIGHT_PINKY},//27
+        
+        {primary:20,               finger:KB.finger.LEFT_PINKY},//28
+        {primary:"a",  shift:"A",  finger:KB.finger.LEFT_PINKY},//29
+        {primary:"s",  shift:"S",  finger:KB.finger.LEFT_RING},//30
+        {primary:"d",  shift:"D",  finger:KB.finger.LEFT_MIDDLE},//31
+        {primary:"f",  shift:"F",  finger:KB.finger.LEFT_INDEX},//32
+        {primary:"g",  shift:"G",  finger:KB.finger.LEFT_INDEX},//33
+        {primary:"h",  shift:"H",  finger:KB.finger.RIGHT_INDEX},//34
+        {primary:"j",  shift:"J",  finger:KB.finger.RIGHT_INDEX},//35
+        {primary:"k",  shift:"K",  finger:KB.finger.RIGHT_MIDDLE},//36
+        {primary:"l",  shift:"L",  finger:KB.finger.RIGHT_RING},//37
+        {primary:"ç",  shift:"Ç",  finger:KB.finger.RIGHT_PINKY},//38
+        {primary:"~",  shift:"^",  finger:KB.finger.RIGHT_PINKY},//39
+        {primary:"]",  shift:"}",  altGr:"º",  finger:KB.finger.RIGHT_PINKY},//40
+        
+        
+        {primary:16,                finger:KB.finger.LEFT_PINKY},//41
+        {primary:"\\",  shift:"|", finger:KB.finger.LEFT_PINKY},//42
+        {primary:"z",  shift:"Z",  finger:KB.finger.LEFT_RING},//43
+        {primary:"x",  shift:"X",  finger:KB.finger.LEFT_MIDDLE},//44
+        {primary:"c",  shift:"C",  altGr:"₢",  finger:KB.finger.LEFT_INDEX},//45
+        {primary:"v",  shift:"V",  finger:KB.finger.LEFT_INDEX},//46
+        {primary:"b",  shift:"B",  finger:KB.finger.RIGHT_INDEX},//47
+        {primary:"n",  shift:"N",  finger:KB.finger.RIGHT_INDEX},//48
+        {primary:"m",  shift:"M",  finger:KB.finger.RIGHT_INDEX},//49
+        {primary:",",  shift:"<",  finger:KB.finger.RIGHT_MIDDLE},//50
+        {primary:".",  shift:">",  finger:KB.finger.RIGHT_RING},//51
+        {primary:";",  shift:":",  finger:KB.finger.RIGHT_PINKY},//52
+        {primary:"/",  shift:"?",  altGr:"°",  finger:KB.finger.RIGHT_PINKY},//53
+        {primary:16,               finger:KB.finger.RIGHT_PINKY},//54
+        
+        {primary:17,               finger:KB.finger.LEFT_THUMB},//55
+        {primary:-91,              finger:KB.finger.LEFT_THUMB},//56
+        {primary:18,               finger:KB.finger.LEFT_THUMB},//57
+        {primary:" ",              finger:KB.finger.LEFT_THUMB},//58
+        {primary:-18,              finger:KB.finger.RIGHT_THUMB},//59
+        {primary:-91,              finger:KB.finger.RIGHT_THUMB},//60
+        {primary:-93,              finger:KB.finger.RIGHT_THUMB},//61
+        {primary:17,               finger:KB.finger.RIGHT_THUMB}//62
+    ]
+};
+
+
+KB.keySet.iso_br.nativo_2 = {
+    label: "Nativo 2",
+    author: "Tadeu Jr",
+    moreInfoUrl: "http://tadeujr.com.br", 
+    moreInfoText: "Tadeu Jr",
+    "fingerStart":{
+        "1":29,
+        "2":30,
+        "3":31,
+        "4":32,
+        "5":58,
+        "6":58,
+        "7":35,
+        "8":36,
+        "9":37,
+        "10":38,
+        "11":58,
+        "false":-1
+     },
+      keyboardType: "iso_br",
+      keys: [ 
+        {primary:"'",   shift:'"',  finger:KB.finger.LEFT_PINKY},//0
+        {primary:"1",   shift:"!",  altGr:"¹",  finger:KB.finger.LEFT_PINKY},//1
+        {primary:"2",   shift:"@",  altGr:"²",  finger:KB.finger.LEFT_RING},//2
+        {primary:"3",   shift:"#",  altGr:"³",  finger:KB.finger.LEFT_RING},//3
+        {primary:"4",   shift:"$",  altGr:"£",  finger:KB.finger.LEFT_MIDDLE},//4
+        {primary:"5",   shift:"%",  altGr:"¢",  finger:KB.finger.LEFT_INDEX},//5
+        {primary:"6",   shift:"¨",  altGr:"¬",  finger:KB.finger.LEFT_INDEX},//6
+        {primary:"7",   shift:"&",  finger:KB.finger.RIGHT_INDEX},//7
+        {primary:"8",   shift:"*",  finger:KB.finger.RIGHT_MIDDLE},//8
+        {primary:"9",   shift:"(",  finger:KB.finger.RIGHT_RING},//9
+        {primary:"0",   shift:")",  finger:KB.finger.RIGHT_RING},//10
+        {primary:"-",   shift:"_",  finger:KB.finger.RIGHT_PINKY},//11
+        {primary:"=",   shift:"+",  altGr:"§",  finger:KB.finger.RIGHT_PINKY},//12
+        {primary:8,                 finger:KB.finger.RIGHT_PINKY},//13
+    
+        {primary:9,                 finger:KB.finger.LEFT_PINKY},//14
+        {primary:"q",   shift:"Q",  altGr:"/",  finger:KB.finger.LEFT_PINKY},//15
+        {primary:"w",   shift:"W",  altGr:"?",  finger:KB.finger.LEFT_RING},//16
+        {primary:"e",   shift:"E",  altGr:"€",  finger:KB.finger.LEFT_MIDDLE},//17
+        {primary:"r",   shift:"R",  finger:KB.finger.LEFT_INDEX},//18
+        {primary:"t",   shift:"T",  finger:KB.finger.LEFT_INDEX},//19
+        {primary:"y",   shift:"Y",  finger:KB.finger.RIGHT_INDEX},//20
+        {primary:"u",   shift:"U",  finger:KB.finger.RIGHT_INDEX},//21
+        {primary:"i",   shift:"I",  finger:KB.finger.RIGHT_MIDDLE},//22
+        {primary:"o",   shift:"O",  finger:KB.finger.RIGHT_RING},//23
+        {primary:"p",   shift:"P",  finger:KB.finger.RIGHT_PINKY},//24
+        {primary:"´",   shift:"`",  finger:KB.finger.RIGHT_PINKY},//25
+        {primary:"[",   shift:"{",  altGr:"ª",  finger:KB.finger.RIGHT_PINKY},//26
+        {primary:"\r",  finger:KB.finger.RIGHT_PINKY},//27
+        
+        {primary:20,               finger:KB.finger.LEFT_PINKY},//28
+        {primary:"a",  shift:"A",  finger:KB.finger.LEFT_PINKY},//29
+        {primary:"s",  shift:"S",  finger:KB.finger.LEFT_RING},//30
+        {primary:"d",  shift:"D",  finger:KB.finger.LEFT_MIDDLE},//31
+        {primary:"f",  shift:"F",  finger:KB.finger.LEFT_INDEX},//32
+        {primary:"g",  shift:"G",  finger:KB.finger.LEFT_INDEX},//33
+        {primary:"h",  shift:"H",  finger:KB.finger.RIGHT_INDEX},//34
+        {primary:"j",  shift:"J",  finger:KB.finger.RIGHT_INDEX},//35
+        {primary:"k",  shift:"K",  finger:KB.finger.RIGHT_MIDDLE},//36
+        {primary:"l",  shift:"L",  finger:KB.finger.RIGHT_RING},//37
+        {primary:"ç",  shift:"Ç",  finger:KB.finger.RIGHT_PINKY},//38
+        {primary:"~",  shift:"^",  finger:KB.finger.RIGHT_PINKY},//39
+        {primary:"]",  shift:"}",  altGr:"º",  finger:KB.finger.RIGHT_PINKY},//40
+        
+        
+        {primary:16,                finger:KB.finger.LEFT_PINKY},//41
+        {primary:"\\",  shift:"|", finger:KB.finger.LEFT_PINKY},//42
+        {primary:"z",  shift:"Z",  finger:KB.finger.LEFT_RING},//43
+        {primary:"x",  shift:"X",  finger:KB.finger.LEFT_MIDDLE},//44
+        {primary:"c",  shift:"C",  altGr:"₢",  finger:KB.finger.LEFT_INDEX},//45
+        {primary:"v",  shift:"V",  finger:KB.finger.LEFT_INDEX},//46
+        {primary:"b",  shift:"B",  finger:KB.finger.RIGHT_INDEX},//47
+        {primary:"n",  shift:"N",  finger:KB.finger.RIGHT_INDEX},//48
+        {primary:"m",  shift:"M",  finger:KB.finger.RIGHT_INDEX},//49
+        {primary:",",  shift:"<",  finger:KB.finger.RIGHT_MIDDLE},//50
+        {primary:".",  shift:">",  finger:KB.finger.RIGHT_RING},//51
+        {primary:";",  shift:":",  finger:KB.finger.RIGHT_PINKY},//52
+        {primary:"/",  shift:"?",  altGr:"°",  finger:KB.finger.RIGHT_PINKY},//53
+        {primary:16,               finger:KB.finger.RIGHT_PINKY},//54
+        
+        {primary:17,               finger:KB.finger.LEFT_THUMB},//55
+        {primary:-91,              finger:KB.finger.LEFT_THUMB},//56
+        {primary:18,               finger:KB.finger.LEFT_THUMB},//57
+        {primary:" ",              finger:KB.finger.LEFT_THUMB},//58
+        {primary:-18,              finger:KB.finger.RIGHT_THUMB},//59
+        {primary:-91,              finger:KB.finger.RIGHT_THUMB},//60
+        {primary:-93,              finger:KB.finger.RIGHT_THUMB},//61
+        {primary:17,               finger:KB.finger.RIGHT_THUMB}//62
     ]
 };
 
@@ -2095,7 +2862,7 @@ KB.keySet.europeanBR.qwerty = {
             var spaceKey = 56;
             if (keySetName === 'european' || keySetName === 'european_ss') {
                 spaceKey = 57;
-            } else if (keySetName === 'europeanBR') {
+            } else if (keySetName === 'iso_br') {
                 spaceKey = 58;
             } else if (keySetName === 'ergodox') {
                 spaceKey = 66;

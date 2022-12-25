@@ -603,7 +603,7 @@ KLA.Analyzer = (function() {
     function hardwareType(keyboardType) {
         if (keyboardType == 'standard') return 'ansi'
         else if (keyboardType == 'european') return 'iso'
-        else if (keyboardType == 'europeanBR') return 'isoBR'
+        else if (keyboardType == 'iso_br') return 'isoBR'
         else if (keyboardType == 'standard_ss') return 'ansi split'
         else if (keyboardType == 'european_ss') return 'iso split'
         else return keyboardType
