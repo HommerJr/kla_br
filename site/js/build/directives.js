@@ -151,7 +151,7 @@ appDirectives.directive('keyboardheatmap', [
                         zIndex: '2'
                     })
                     if (pointerEventsCheck() === true) {
-                        $('#'+scope.infoId).html('Hover over a key to get its press count');  
+                        $('#'+scope.infoId).html('Passe por uma tecla para ver quantas vezes foi pressionada');  
                     } else {
                         $('#'+scope.infoId).html('');
                     }
@@ -162,7 +162,7 @@ appDirectives.directive('keyboardheatmap', [
                         type: 'heatmap',
                         onKeyMouseOver: function(idx) {
                             if (pointerEventsCheck() === true) {
-                                $('#'+scope.infoId).html('Pressed ' + scope.keydata[idx].count + ' times');
+                                $('#'+scope.infoId).html('Pressionada ' + scope.keydata[idx].count + ' vezes');
                                 /*
                                 $('#'+scope.hmId).css({
                                     'cursor': 'pointer'
@@ -171,7 +171,7 @@ appDirectives.directive('keyboardheatmap', [
                             }
                         },
                         onKeyboardMouseOut: function() {
-                            $('#'+scope.infoId).html('Hover over a key to get its press count');  
+                            $('#'+scope.infoId).html('Passe por uma tecla para ver quantas vezes foi pressionada');  
                             $('#'+scope.hmId).css({
                                 'cursor': 'default'
                             });

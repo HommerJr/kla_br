@@ -882,7 +882,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
   $templateCache.put('partials/results.htm',
     "<div>\n" +
     "    <div class=\"jumbotron subhead\">\n" +
-    "        <h1>Results</h1>\n" +
+    "        <h1>Resultados</h1>\n" +
     "        <p class=\"lead\">Veja cada aba para uma análise detalhada <p>\n" +
     "    </div>\n" +
     "    <ul class='nav nav-pills' id='main-output-tabs'>\n" +
@@ -891,7 +891,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "        <li class='kla-pill'><a ng-click='tabSwitch($event, \"distance\")' href='#distance'>Distância</a></li>\n" +
     "        <li class='kla-pill'><a ng-click='tabSwitch($event, \"fingerUsage\")' href='#fingerUsage'>Uso dos dedos</a></li>\n" +
     "        <li class='kla-pill'><a ng-click='tabSwitch($event, \"rowUsage\")' href='#rowUsage'>Uso das linhas</a></li>\n" +
-    "        <li class='kla-pill'><a ng-click='tabSwitch($event, \"miscellaneous\")' href='#miscellaneous'>Diversos</a></li>\n" +
+    "        <li class='kla-pill'><a ng-click='tabSwitch($event, \"miscellaneous\")' href='#miscellaneous'>Diversas</a></li>\n" +
     "        <!-- <li class='kla-pill'><a ng-click='tabSwitch($event, \"personalized\")' href='#personalized'>Personalized</a></li> -->\n" +
     "    </ul>\n" +
     "    <div class='tab-content'>\n" +
@@ -913,13 +913,13 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                                <th width=\"20px\">\n" +
     "                                </th>\n" +
     "                                <th>\n" +
-    "                                    <div class='text-left'>Type</div>\n" +
+    "                                    <div class='text-left'>Tipo</div>\n" +
     "                                </th>\n" +
     "                                <th>\n" +
     "                                    <div class='text-left'>Layout</div>\n" +
     "                                </th>\n" +
     "                                <th>\n" +
-    "                                    <div id='kla-score-head' class='text-right' ng-click='sortRankedLayouts()'>Score</div>\n" +
+    "                                    <div id='kla-score-head' class='text-right' ng-click='sortRankedLayouts()'>Pontuação</div>\n" +
     "                                </th>\n" +
     "                                <th></th>\n" +
     "                            </tr>\n" +
@@ -952,12 +952,13 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                </div>\n" +
     "            </p>\n" +
     "            <p>\n" +
-    "                The layout score is based on a weighed calculation that factors in\n" +
-    "                a distance your fingers moved,\n" +
-    "                how often you use particular fingers,\n" +
-    "                how often you switch fingers while typing,\n" +
-    "                and how much the layout is similar to the reference,\n" +
-    "                in the following proportions:\n" +
+    "                A pontuação é calculada pela ponderação dos seguintes fatores:\n" +
+    "                distância percorrida pelos dedos,\n" +
+    "                uso particular de cada dedo,\n" +
+    "                alternância entre os dedos,\n" +
+    "                alternância entre as mãos\n" +
+    "                e similaridade com o layout de referência,\n" +
+    "                nas seguintes proporções:\n" +
     "            </p>\n" +
     "            <form class='form-horizontal'>\n" +
     "                <table class=\"kla-table-adjust\">\n" +
@@ -1011,7 +1012,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "            <resulttable source='results.distance'></resulttable>\n" +
     "\n" +
     "            <div class='kla-piecharts'>\n" +
-    "                <h4 class='text-center kla-pie-header'>Pie Chart Visualizations</h4>\n" +
+    "                <h4 class='text-center kla-pie-header'>Visualização em pizza</h4>\n" +
     "\n" +
     "                <div ng-repeat=\"layout in results.distance.seriesData.seriesLabels track by $id($index)\" class='kla-pie-container'>\n" +
     "                    <piechart width=\"400px\" height=\"330px\" source=\"results.distance\" series=\"$index\"></piechart>\n" +
@@ -1025,7 +1026,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "            <resulttable source='results.fingerUsage'></resulttable>\n" +
     "\n" +
     "            <div class='kla-piecharts'>\n" +
-    "                <h4 class='text-center kla-display-opts-header'>Pie Chart Visualizations</h4>\n" +
+    "                <h4 class='text-center kla-display-opts-header'>Visualização em pizza</h4>\n" +
     "\n" +
     "                <div ng-repeat=\"layout in results.fingerUsage.seriesData.seriesLabels track by $id($index)\" class='kla-pie-container'>\n" +
     "                    <piechart width=\"400px\" height=\"330px\" source=\"results.fingerUsage\" series=\"$index\"></piechart>\n" +
@@ -1039,7 +1040,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "            <resulttable source='results.rowUsage'></resulttable>\n" +
     "\n" +
     "            <div class='kla-piecharts'>\n" +
-    "                <h4 class='text-center kla-display-opts-header'>Pie Chart Visualizations</h4>\n" +
+    "                <h4 class='text-center kla-display-opts-header'>Visualização em pizza</h4>\n" +
     "\n" +
     "                <div ng-repeat=\"layout in results.rowUsage.seriesData.seriesLabels track by $id($index)\" class='kla-pie-container'>\n" +
     "                    <piechart width=\"400px\" height=\"330px\" source=\"results.rowUsage\" series=\"$index\"></piechart>\n" +
@@ -1059,8 +1060,8 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                    <thead>\n" +
     "                        <tr>\n" +
     "                            <th>Rank</th>\n" +
-    "                            <th>Key</th>\n" +
-    "                            <th>Presses</th>\n" +
+    "                            <th>Tecla</th>\n" +
+    "                            <th>Pressionadas</th>\n" +
     "                        </tr>\n" +
     "                    </thead>\n" +
     "                    <tbody>\n" +
@@ -1084,12 +1085,12 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "        </div>\n" +
     "        <div class='tab-pane' id='miscellaneous'>\n" +
     "            <div class=\"kla-misc-box\">\n" +
-    "                <strong>Consecutive Finger Use</strong> – \n" +
-    "                How often the same finger is used to type a key as was used to type the previous key.\n" +
-    "                An example of this would be typing “fg” on QWERTY. When looking at “g”, the program notes that  the index finger\n" +
-    "                was also previously used to type “f”. The lower the number the better.\n" +
+    "                <strong>Uso consecutivo de um dedo</strong> – \n" +
+    "                Quanto um mesmo dedo foi utilizado para digitar teclas seguidas.\n" +
+    "                Um exemplo seria digitar “fg” no layout QWERTY. Olhando para o “g”, o programa nota que o indicador\n" +
+    "                foi utilizado para digitar o “f” anteriormente. Quanto menor o númeor, melhor.\n" +
     "                <p></p>\n" +
-    "                <label><input class='kla-result-checkbox' ng-model=\"settings.cfuIgnoreDups\" type=\"checkbox\" /> Include instances of the same key being pressed twice in a row (example: typing “ff”).</label>\n" +
+    "                <label><input class='kla-result-checkbox' ng-model=\"settings.cfuIgnoreDups\" type=\"checkbox\" /> Incluí a digitação da mesma tecla duas vezes seguidas (exemplo: digitar “ff”).</label>\n" +
     "            </div>\n" +
     "            <seriesbarchart width=\"940px\" height=\"300px\" source=\"results.consecFingerPress\"></seriesbarchart>\n" +
     "            <resultoptions source='results.consecFingerPress' displayopts=false></resultoptions>\n" +
@@ -1098,10 +1099,11 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "            <div class='kla-misc-spacing'></div>\n" +
     "\n" +
     "            <div class=\"kla-misc-box\">\n" +
-    "                <strong>Consecutive Hand and Thumb Use</strong> – \n" +
-    "                How often the same hand was used to type a key as was used to type the previous key (thumbs are grouped as a separate entity). An example of this would be typing “af” on QWERTY. When looking at “f”, the program notes that the left hand was also previously used to type “a”. The lower the number the better.\n" +
+    "                <strong>Uso consecutivo de uma mão e de um dedão</strong> – \n" +
+    "                Quanto a mesma mão foi utilizada para digitar teclas seguidas (dedões são considerados entidades separadas).\n" +
+    "                Um exemplo seria digitar “af” no QWERTY. Olhando para o “f”, o programa nota que a mão esquerda foi utilizada para digitar o “a” anteriormente. Quanto menor o númeor, melhor.\n" +
     "                <p></p>\n" +
-    "                <label><input class='kla-result-checkbox' ng-model=\"settings.chuIgnoreDups\" type=\"checkbox\" /> Include instances of the same key being pressed twice in a row (example: typing “ff”).</label>\n" +
+    "                <label><input class='kla-result-checkbox' ng-model=\"settings.chuIgnoreDups\" type=\"checkbox\" /> Incluí a digitação da mesma tecla duas vezes seguidas (exemplo: digitar “ff”).</label>\n" +
     "            </div>\n" +
     "            <seriesbarchart width=\"940px\" height=\"300px\" source=\"results.consecHandPress\"></seriesbarchart>\n" +
     "            <resultoptions source='results.consecHandPress' displayopts=false></resultoptions>\n" +
@@ -1110,8 +1112,8 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "            <div class='kla-misc-spacing'></div>\n" +
     "\n" +
     "            <div class=\"kla-misc-box\">\n" +
-    "                <strong>Modifier Key Use</strong> – \n" +
-    "                How often the Shift, Alt Gr, and Shift + Alt Gr modifiers are used with characters in the text.\n" +
+    "                <strong>Uso das teclas modificadoras</strong> – \n" +
+    "                Quanto as teclas Shift, Alt Gr, e Shift + Alt Gr são utilizadas no texto.\n" +
     "            </div>\n" +
     "            <seriesbarchart width=\"940px\" height=\"300px\" source=\"results.modifierUse\"></seriesbarchart>\n" +
     "            <resultoptions source='results.modifierUse' displayopts=false></resultoptions>\n" +
@@ -1147,7 +1149,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "    </div>\n" +
     "\n" +
     "    <div class='text-center try-again-btn'>\n" +
-    "        <button class=\"btn btn-large\" type=\"button\" ng-click=\"returnToInput()\">Try Another Input</button>\n" +
+    "        <button class=\"btn btn-large\" type=\"button\" ng-click=\"returnToInput()\">Testar outro layout</button>\n" +
     "    </div>\n" +
     "\n" +
     "</div>\n"

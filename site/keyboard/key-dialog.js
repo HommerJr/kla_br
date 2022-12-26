@@ -129,19 +129,19 @@ KB.KeyDialog = (function() {
         myRows[rr++] = createTextInputRow("Shift + Alt Gr:", namespace + "-shiftAltGrKey",  saHelp);
         
         opts = [
-            {label:"Left Pinky",    value:KB.finger.LEFT_PINKY, lside:true, rside:false},
-            {label:"Left Ring",     value:KB.finger.LEFT_RING, lside:false, rside:false},
-            {label:"Left Middle",   value:KB.finger.LEFT_MIDDLE, lside:false, rside:false},
-            {label:"Left Index",    value:KB.finger.LEFT_INDEX, lside:false, rside:true},
+            {label:"Mínimo Esquerdo",    value:KB.finger.LEFT_PINKY, lside:true, rside:false},
+            {label:"Anelar Esquerdo",     value:KB.finger.LEFT_RING, lside:false, rside:false},
+            {label:"Médio Esquerdo",   value:KB.finger.LEFT_MIDDLE, lside:false, rside:false},
+            {label:"Indicador Esquerdo",    value:KB.finger.LEFT_INDEX, lside:false, rside:true},
 
-            {label:"Left Thumb",    value:KB.finger.LEFT_THUMB, lside:true, rside:true},
+            {label:"Dedão Esquerdo",    value:KB.finger.LEFT_THUMB, lside:true, rside:true},
 
-            {label:"Right Thumb",   value:KB.finger.RIGHT_THUMB, lside:true, rside:true},
+            {label:"Dedão Direito",   value:KB.finger.RIGHT_THUMB, lside:true, rside:true},
 
-            {label:"Right Index",   value:KB.finger.RIGHT_INDEX, lside:true, rside:false},
-            {label:"Right Middle",  value:KB.finger.RIGHT_MIDDLE, lside:false, rside:false},
-            {label:"Right Ring",    value:KB.finger.RIGHT_RING, lside:false, rside:false},
-            {label:"Right Pinky",   value:KB.finger.RIGHT_PINKY, lside:false,rside:true}
+            {label:"Indicador Direito",   value:KB.finger.RIGHT_INDEX, lside:true, rside:false},
+            {label:"Médio Direito",  value:KB.finger.RIGHT_MIDDLE, lside:false, rside:false},
+            {label:"Anelar Direito",    value:KB.finger.RIGHT_RING, lside:false, rside:false},
+            {label:"Mínimo Direito",   value:KB.finger.RIGHT_PINKY, lside:false,rside:true}
         ];
 
         myRows[rr++] = createComboInputRow("Finger For Pressing Key:", namespace + "-finger", opts);
@@ -149,19 +149,19 @@ KB.KeyDialog = (function() {
         opts = [
             {label:"None",   value:KB.finger.NONE, lside:true, rside:true},
 
-            {label:"Left Pinky",    value:KB.finger.LEFT_PINKY, lside:true, rside:false},
-            {label:"Left Ring",     value:KB.finger.LEFT_RING, lside:false, rside:false},
-            {label:"Left Middle",   value:KB.finger.LEFT_MIDDLE, lside:false, rside:false},
-            {label:"Left Index",    value:KB.finger.LEFT_INDEX, lside:false, rside:true},
+            {label:"Mínimo Esquerdo",    value:KB.finger.LEFT_PINKY, lside:true, rside:false},
+            {label:"Anelar Esquerdo",     value:KB.finger.LEFT_RING, lside:false, rside:false},
+            {label:"Médio Esquerdo",   value:KB.finger.LEFT_MIDDLE, lside:false, rside:false},
+            {label:"Indicador Esquerdo",    value:KB.finger.LEFT_INDEX, lside:false, rside:true},
 
-            {label:"Left Thumb",    value:KB.finger.LEFT_THUMB, lside:true, rside:false},
+            {label:"Dedão Esquerdo",    value:KB.finger.LEFT_THUMB, lside:true, rside:false},
             {label:"Both Thumbs",   value: KB.finger.BOTH_THUMBS, lside:false, rside:false},
-            {label:"Right Thumb",   value:KB.finger.RIGHT_THUMB, lside:false, rside:true},
+            {label:"Dedão Direito",   value:KB.finger.RIGHT_THUMB, lside:false, rside:true},
 
-            {label:"Right Index",   value:KB.finger.RIGHT_INDEX, lside:true, rside:false},
-            {label:"Right Middle",  value:KB.finger.RIGHT_MIDDLE, lside:false, rside:false},
-            {label:"Right Ring",    value:KB.finger.RIGHT_RING, lside:false, rside:false},
-            {label:"Right Pinky",   value:KB.finger.RIGHT_PINKY, lside:false,rside:true}
+            {label:"Indicador Direito",   value:KB.finger.RIGHT_INDEX, lside:true, rside:false},
+            {label:"Médio Direito",  value:KB.finger.RIGHT_MIDDLE, lside:false, rside:false},
+            {label:"Anelar Direito",    value:KB.finger.RIGHT_RING, lside:false, rside:false},
+            {label:"Mínimo Direito",   value:KB.finger.RIGHT_PINKY, lside:false,rside:true}
         ];
         myRows[rr++] = createComboInputRow("Start Position of Finger:", namespace + "-fingerStart", opts);
         

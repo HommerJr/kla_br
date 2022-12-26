@@ -657,89 +657,89 @@ appServices.factory('resultsGenerator', ['$log', 'keyboards', 'analyzer', 'libra
 
             var displayData = {};
             displayData['All'] = [  
-                {label: 'Left Pinky',   color: 'rgba(  0,255,255,0.5)', data: [KB.finger.LEFT_PINKY]},  
-                {label: 'Left Ring',    color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_RING]},   
-                {label: 'Left Middle',  color: 'rgba(136,136,255,0.5)', data: [KB.finger.LEFT_MIDDLE]},  
-                {label: 'Left Index',   color: 'rgba(255,  0,255,0.5)', data: [KB.finger.LEFT_INDEX]}, 
-                {label: 'Left Thumb',   color: 'rgba(255,255,255,0.5)', data: [KB.finger.LEFT_THUMB]},
-                {label: 'Right Thumb',  color: 'rgba(204,204,204,0.5)', data: [KB.finger.RIGHT_THUMB]}, 
-                {label: 'Right Index',  color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_INDEX]}, 
-                {label: 'Right Middle', color: 'rgba(255,136,  0,0.5)', data: [KB.finger.RIGHT_MIDDLE]}, 
-                {label: 'Right Ring',   color: 'rgba(255,255,  0,0.5)', data: [KB.finger.RIGHT_RING]}, 
-                {label: 'Right Pinky',  color: 'rgba(  0,255,  0,0.5)', data: [KB.finger.RIGHT_PINKY]} 
+                {label: 'Mínimo Esq',   color: 'rgba(  0,255,255,0.5)', data: [KB.finger.LEFT_PINKY]},  
+                {label: 'Anelar Esq',    color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_RING]},   
+                {label: 'Médio Esq',  color: 'rgba(136,136,255,0.5)', data: [KB.finger.LEFT_MIDDLE]},  
+                {label: 'Indicador Esq',   color: 'rgba(255,  0,255,0.5)', data: [KB.finger.LEFT_INDEX]}, 
+                {label: 'Dedão Esq',   color: 'rgba(255,255,255,0.5)', data: [KB.finger.LEFT_THUMB]},
+                {label: 'Dedão Dir',  color: 'rgba(204,204,204,0.5)', data: [KB.finger.RIGHT_THUMB]}, 
+                {label: 'Indicador Dir',  color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_INDEX]}, 
+                {label: 'Médio Dir', color: 'rgba(255,136,  0,0.5)', data: [KB.finger.RIGHT_MIDDLE]}, 
+                {label: 'Anelar Dir',   color: 'rgba(255,255,  0,0.5)', data: [KB.finger.RIGHT_RING]}, 
+                {label: 'Mínimo Dir',  color: 'rgba(  0,255,  0,0.5)', data: [KB.finger.RIGHT_PINKY]} 
             ];
             displayData['Fingers'] = [
-                {label: 'Left Pinky',   color: 'rgba(  0,255,255,0.5)', data: [KB.finger.LEFT_PINKY]},  
-                {label: 'Left Ring',    color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_RING]},    
-                {label: 'Left Middle',  color: 'rgba(136,136,255,0.5)', data: [KB.finger.LEFT_MIDDLE]}, 
-                {label: 'Left Index',   color: 'rgba(255,  0,255,0.5)', data: [KB.finger.LEFT_INDEX]},
-                {label: 'Right Index',  color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_INDEX]}, 
-                {label: 'Right Middle', color: 'rgba(255,136,  0,0.5)', data: [KB.finger.RIGHT_MIDDLE]}, 
-                {label: 'Right Ring',   color: 'rgba(255,255,  0,0.5)', data: [KB.finger.RIGHT_RING]},  
-                {label: 'Right Pinky',  color: 'rgba(  0,255,  0,0.5)', data: [KB.finger.RIGHT_PINKY]}
+                {label: 'Mínimo Esquerdo',   color: 'rgba(  0,255,255,0.5)', data: [KB.finger.LEFT_PINKY]},  
+                {label: 'Anelar Esquerdo',    color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_RING]},    
+                {label: 'Médio Esquerdo',  color: 'rgba(136,136,255,0.5)', data: [KB.finger.LEFT_MIDDLE]}, 
+                {label: 'Indicador Esquerdo',   color: 'rgba(255,  0,255,0.5)', data: [KB.finger.LEFT_INDEX]},
+                {label: 'Indicador Direito',  color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_INDEX]}, 
+                {label: 'Médio Direito', color: 'rgba(255,136,  0,0.5)', data: [KB.finger.RIGHT_MIDDLE]}, 
+                {label: 'Anelar Direito',   color: 'rgba(255,255,  0,0.5)', data: [KB.finger.RIGHT_RING]},  
+                {label: 'Mínimo Direito',  color: 'rgba(  0,255,  0,0.5)', data: [KB.finger.RIGHT_PINKY]}
             ];
             displayData['Left Hand'] =  [
-                {label: 'Left Pinky',   color: 'rgba(  0,255,255,0.5)', data: [KB.finger.LEFT_PINKY]},
-                {label: 'Left Ring',    color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_RING]},   
-                {label: 'Left Middle',  color: 'rgba(136,136,255,0.5)', data: [KB.finger.LEFT_MIDDLE]},  
-                {label: 'Left Index',   color: 'rgba(255,  0,255,0.5)', data: [KB.finger.LEFT_INDEX]}, 
-                {label: 'Left Thumb',   color: 'rgba(255,255,255,0.5)', data: [KB.finger.LEFT_THUMB]}
+                {label: 'Mínimo Esquerdo',   color: 'rgba(  0,255,255,0.5)', data: [KB.finger.LEFT_PINKY]},
+                {label: 'Anelar Esquerdo',    color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_RING]},   
+                {label: 'Médio Esquerdo',  color: 'rgba(136,136,255,0.5)', data: [KB.finger.LEFT_MIDDLE]},  
+                {label: 'Indicador Esquerdo',   color: 'rgba(255,  0,255,0.5)', data: [KB.finger.LEFT_INDEX]}, 
+                {label: 'Dedão Esquerdo',   color: 'rgba(255,255,255,0.5)', data: [KB.finger.LEFT_THUMB]}
             ];
             displayData['Right Hand'] = [
-                {label: 'Right Thumb',  color: 'rgba(204,204,204,0.5)', data: [KB.finger.RIGHT_THUMB]}, 
-                {label: 'Right Index',  color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_INDEX]}, 
-                {label: 'Right Middle', color: 'rgba(255,136,  0,0.5)', data: [KB.finger.RIGHT_MIDDLE]}, 
-                {label: 'Right Ring',   color: 'rgba(255,255,  0,0.5)', data: [KB.finger.RIGHT_RING]}, 
-                {label: 'Right Pinky',  color: 'rgba(  0,255,  0,0.5)', data: [KB.finger.RIGHT_PINKY]}
+                {label: 'Dedão Direito',  color: 'rgba(204,204,204,0.5)', data: [KB.finger.RIGHT_THUMB]}, 
+                {label: 'Indicador Direito',  color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_INDEX]}, 
+                {label: 'Médio Direito', color: 'rgba(255,136,  0,0.5)', data: [KB.finger.RIGHT_MIDDLE]}, 
+                {label: 'Anelar Direito',   color: 'rgba(255,255,  0,0.5)', data: [KB.finger.RIGHT_RING]}, 
+                {label: 'Mínimo Direito',  color: 'rgba(  0,255,  0,0.5)', data: [KB.finger.RIGHT_PINKY]}
             ];
             displayData['Left Fingers vs Right Fingers vs Thumbs'] = [ 
-                {label: 'Left Fingers', color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_PINKY,  KB.finger.LEFT_RING,   KB.finger.LEFT_MIDDLE,  KB.finger.LEFT_INDEX]}, 
-                {label: 'Right Fingers',color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_INDEX, KB.finger.RIGHT_MIDDLE, KB.finger.RIGHT_RING, KB.finger.RIGHT_PINKY]},
-                {label: 'Thumbs',       color: 'rgba(204,204,204,0.5)', data: [KB.finger.LEFT_THUMB,KB.finger.RIGHT_THUMB]}
+                {label: 'Dedos Esquerdos', color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_PINKY,  KB.finger.LEFT_RING,   KB.finger.LEFT_MIDDLE,  KB.finger.LEFT_INDEX]}, 
+                {label: 'Dedos Direitos',color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_INDEX, KB.finger.RIGHT_MIDDLE, KB.finger.RIGHT_RING, KB.finger.RIGHT_PINKY]},
+                {label: 'Dedõs',       color: 'rgba(204,204,204,0.5)', data: [KB.finger.LEFT_THUMB,KB.finger.RIGHT_THUMB]}
             ];
             displayData['Hand vs Hand'] = [ 
-                {label: 'Left Hand', color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_PINKY,  KB.finger.LEFT_RING,   KB.finger.LEFT_MIDDLE,  KB.finger.LEFT_INDEX, KB.finger.LEFT_THUMB]}, 
-                {label: 'Right Hand',color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_INDEX, KB.finger.RIGHT_MIDDLE, KB.finger.RIGHT_RING, KB.finger.RIGHT_PINKY, KB.finger.RIGHT_THUMB]}
+                {label: 'Mão Esquerda', color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_PINKY,  KB.finger.LEFT_RING,   KB.finger.LEFT_MIDDLE,  KB.finger.LEFT_INDEX, KB.finger.LEFT_THUMB]}, 
+                {label: 'Mão Direita',color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_INDEX, KB.finger.RIGHT_MIDDLE, KB.finger.RIGHT_RING, KB.finger.RIGHT_PINKY, KB.finger.RIGHT_THUMB]}
             ];
             displayData['Pinky vs Pinky'] = [ 
-                {label: 'Left Pinky', color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_PINKY]}, 
-                {label: 'Right Pinky',color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_PINKY]}
+                {label: 'Mínimo Esquerdo', color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_PINKY]}, 
+                {label: 'Mínimo Direito',color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_PINKY]}
             ];
             displayData['Ring vs Ring'] = [ 
-                {label: 'Left Ring', color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_RING]}, 
-                {label: 'Right Ring',color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_RING]}
+                {label: 'Anelar Esquerdo', color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_RING]}, 
+                {label: 'Anelar Direito',color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_RING]}
             ];
             displayData['Middle vs Middle'] = [ 
-                {label: 'Left Middle', color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_MIDDLE]}, 
-                {label: 'Right Middle',color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_MIDDLE]}
+                {label: 'Médio Esquerdo', color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_MIDDLE]}, 
+                {label: 'Médio Direito',color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_MIDDLE]}
             ];
             displayData['Index vs Index'] = [ 
-                {label: 'Left Index', color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_INDEX]}, 
-                {label: 'Right Index',color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_INDEX]}
+                {label: 'Indicador Esquerdo', color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_INDEX]}, 
+                {label: 'Indicador Direito',color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_INDEX]}
             ];
             displayData['Thumb vs Thumb'] = [ 
-                {label: 'Left Thumb', color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_THUMB]}, 
-                {label: 'Right Thumb',color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_THUMB]}
+                {label: 'Dedão Esquerdo', color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_THUMB]}, 
+                {label: 'Dedão Direito',color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_THUMB]}
             ];
 
             var rowDisplayData = {};
             rowDisplayData['All'] = [
-                {label: 'Number Row',   color: 'rgba(  0,255,255,0.5)', data: [1]},
-                {label: 'Top Row',      color: 'rgba(  0,  0,230,0.5)', data: [2]},
-                {label: 'Home Row',     color: 'rgba(136,136,255,0.5)', data: [3]},
-                {label: 'Bottom Row',   color: 'rgba(255,  0,255,0.5)', data: [4]},
-                {label: 'Spacebar Row', color: 'rgba(255,255,255,0.5)', data: [5]}
+                {label: 'Linha Numérica',   color: 'rgba(  0,255,255,0.5)', data: [1]},
+                {label: 'Linha Superior',      color: 'rgba(  0,  0,230,0.5)', data: [2]},
+                {label: 'Linha Principal',     color: 'rgba(136,136,255,0.5)', data: [3]},
+                {label: 'Linha Inferior',   color: 'rgba(255,  0,255,0.5)', data: [4]},
+                {label: 'Linha do Espaço', color: 'rgba(255,255,255,0.5)', data: [5]}
             ];
             rowDisplayData['Number, Top, Home, Bottom'] = [
-                {label: 'Number Row',   color: 'rgba(  0,255,255,0.5)', data: [1]},
-                {label: 'Top Row',      color: 'rgba(  0,  0,230,0.5)', data: [2]},
-                {label: 'Home Row',     color: 'rgba(136,136,255,0.5)', data: [3]},
-                {label: 'Bottom Row',   color: 'rgba(255,  0,255,0.5)', data: [4]}
+                {label: 'Linha Numérica',   color: 'rgba(  0,255,255,0.5)', data: [1]},
+                {label: 'Linha Superior',      color: 'rgba(  0,  0,230,0.5)', data: [2]},
+                {label: 'Linha Principal',     color: 'rgba(136,136,255,0.5)', data: [3]},
+                {label: 'Linha Inferior',   color: 'rgba(255,  0,255,0.5)', data: [4]}
             ];
             rowDisplayData['Top, Home, Bottom'] = [
-                {label: 'Top Row',      color: 'rgba(  0,  0,230,0.5)', data: [2]},
-                {label: 'Home Row',     color: 'rgba(136,136,255,0.5)', data: [3]},
-                {label: 'Bottom Row',   color: 'rgba(255,  0,255,0.5)', data: [4]}
+                {label: 'Linha Superior',      color: 'rgba(  0,  0,230,0.5)', data: [2]},
+                {label: 'Linha Principal',     color: 'rgba(136,136,255,0.5)', data: [3]},
+                {label: 'Linha Inferior',   color: 'rgba(255,  0,255,0.5)', data: [4]}
             ];
 
             var unitConverter = function(rawVal, pixelsPerCm, unit) {
@@ -895,24 +895,24 @@ appServices.factory('resultsGenerator', ['$log', 'keyboards', 'analyzer', 'libra
 
             var cfuDisplayData = {};
             cfuDisplayData['nodups'] = [  
-                {label: 'Left Pinky',   color: 'rgba(  0,255,255,0.5)', data: [KB.finger.LEFT_PINKY]},  
-                {label: 'Left Ring',    color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_RING]},   
-                {label: 'Left Middle',  color: 'rgba(136,136,255,0.5)', data: [KB.finger.LEFT_MIDDLE]},  
-                {label: 'Left Index',   color: 'rgba(255,  0,255,0.5)', data: [KB.finger.LEFT_INDEX]}, 
-                {label: 'Left Thumb',   color: 'rgba(255,255,255,0.5)', data: [KB.finger.LEFT_THUMB]},
-                {label: 'Right Thumb',  color: 'rgba(204,204,204,0.5)', data: [KB.finger.RIGHT_THUMB]}, 
-                {label: 'Right Index',  color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_INDEX]}, 
-                {label: 'Right Middle', color: 'rgba(255,136,  0,0.5)', data: [KB.finger.RIGHT_MIDDLE]}, 
-                {label: 'Right Ring',   color: 'rgba(255,255,  0,0.5)', data: [KB.finger.RIGHT_RING]}, 
-                {label: 'Right Pinky',  color: 'rgba(  0,255,  0,0.5)', data: [KB.finger.RIGHT_PINKY]} 
+                {label: 'Mínimo Esq',   color: 'rgba(  0,255,255,0.5)', data: [KB.finger.LEFT_PINKY]},  
+                {label: 'Anelar Esq',    color: 'rgba(  0,  0,230,0.5)', data: [KB.finger.LEFT_RING]},   
+                {label: 'Médio Esq',  color: 'rgba(136,136,255,0.5)', data: [KB.finger.LEFT_MIDDLE]},  
+                {label: 'Indicador Esq',   color: 'rgba(255,  0,255,0.5)', data: [KB.finger.LEFT_INDEX]}, 
+                {label: 'Dedão Esq',   color: 'rgba(255,255,255,0.5)', data: [KB.finger.LEFT_THUMB]},
+                {label: 'Dedão Dir',  color: 'rgba(204,204,204,0.5)', data: [KB.finger.RIGHT_THUMB]}, 
+                {label: 'Indicador Dir',  color: 'rgba(255,  0,  0,0.5)', data: [KB.finger.RIGHT_INDEX]}, 
+                {label: 'Médio Dir', color: 'rgba(255,136,  0,0.5)', data: [KB.finger.RIGHT_MIDDLE]}, 
+                {label: 'Anelar Dir',   color: 'rgba(255,255,  0,0.5)', data: [KB.finger.RIGHT_RING]}, 
+                {label: 'Mínimo Dir',  color: 'rgba(  0,255,  0,0.5)', data: [KB.finger.RIGHT_PINKY]} 
             ];
             cfuDisplayData['dups'] = cfuDisplayData['nodups'];
 
             var chuDisplayData = {};
             chuDisplayData['nodups'] = [  
-                {label: 'Left Fingers', color: 'rgba(  0,  0,230,0.5)', data: ['left']}, 
-                {label: 'Right Fingers',color: 'rgba(255,  0,  0,0.5)', data: ['right']},
-                {label: 'Thumbs',       color: 'rgba(204,204,204,0.5)', data: ['thumbs']}
+                {label: 'Dedos Esquerdos', color: 'rgba(  0,  0,230,0.5)', data: ['left']}, 
+                {label: 'Dedos Direitos',color: 'rgba(255,  0,  0,0.5)', data: ['right']},
+                {label: 'Dedões',       color: 'rgba(204,204,204,0.5)', data: ['thumbs']}
             ];
             chuDisplayData['dups'] = chuDisplayData['nodups'];
 

@@ -33,16 +33,16 @@ KB.finger.RIGHT_PINKY =  10;
 KB.finger.BOTH_THUMBS =  11;
 
 KB.fingers = {};
-KB.fingers[KB.finger.LEFT_PINKY] =   "Left Pinky";
-KB.fingers[KB.finger.LEFT_RING] =    "Left Ring";
-KB.fingers[KB.finger.LEFT_MIDDLE] =  "Left Middle";
-KB.fingers[KB.finger.LEFT_INDEX] =   "Left Index";
-KB.fingers[KB.finger.LEFT_THUMB] =   "Left Thumb";
-KB.fingers[KB.finger.RIGHT_THUMB] =  "Right Thumb";
-KB.fingers[KB.finger.RIGHT_INDEX] =  "Right Index";
-KB.fingers[KB.finger.RIGHT_MIDDLE] = "Right Middle";
-KB.fingers[KB.finger.RIGHT_RING] =   "Right Ring";
-KB.fingers[KB.finger.RIGHT_PINKY] =  "Right Pinky";
+KB.fingers[KB.finger.LEFT_PINKY] =   "Mínimo Esquerdo";
+KB.fingers[KB.finger.LEFT_RING] =    "Anelar Esquerdo";
+KB.fingers[KB.finger.LEFT_MIDDLE] =  "Médio Esquerdo";
+KB.fingers[KB.finger.LEFT_INDEX] =   "Indicador Esquerdo";
+KB.fingers[KB.finger.LEFT_THUMB] =   "Dedão Esquerdo";
+KB.fingers[KB.finger.RIGHT_THUMB] =  "Dedão Direito";
+KB.fingers[KB.finger.RIGHT_INDEX] =  "Indicador Direito";
+KB.fingers[KB.finger.RIGHT_MIDDLE] = "Médio Direito";
+KB.fingers[KB.finger.RIGHT_RING] =   "Anelar Direito";
+KB.fingers[KB.finger.RIGHT_PINKY] =  "Mínimo Direito";
 
 KB.finger.color[KB.finger.NONE] =           {r:255, g:255, b:255, a: 0.4};
 KB.finger.color[KB.finger.LEFT_PINKY] =     {r:  0, g:255, b:255, a: 0.4};//"rgba(  0, 255, 255, 0.5)";//"#00FFFF";
