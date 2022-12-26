@@ -241,7 +241,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                                <span class=\"caret\"></span>\n" +
     "                            </button>\n" +
     "                            <ul class=\"dropdown-menu\">\n" +
-    "                                <li><a ng-click=\"copyJson(fingering=true)\" title=\"Copiar esse layout\">Copiar esse layout</a></li>\n" +
+    "                                <li><a ng-click=\"copyJson()\" title=\"Copiar esse layout\">Copiar esse layout</a></li>\n" +
     "                                <li><a ng-click=\"copyAllJson()\" title=\"Copiar todos os layouts\">Copiar todos layouts</a></li>\n" +
     "                            </ul>\n" +
     "                        </div>\n" +
@@ -253,7 +253,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                                <span class=\"caret\"></span>\n" +
     "                            </button>\n" +
     "                            <ul class=\"dropdown-menu\">\n" +
-    "                                <li><a id=\"kb-config-export-fingering\" ng-mouseenter=\"exportJson(fingering=true)\" title=\"Gravar esse layout em um arquivo\">Exportar esse layout</a></li>\n" +
+    "                                <li><a id=\"kb-config-export-fingering\" ng-mouseenter=\"exportJson()\" title=\"Gravar esse layout em um arquivo\">Exportar esse layout</a></li>\n" +
     "                                <li><a id=\"kb-config-export-all\" ng-mouseenter=\"exportAllJson()\" title=\"Gravar todos os layouts em um arquivo\">Exportar todos layouts</a></li>\n" +
     "                            </ul>\n" +
     "                        </div>\n" +

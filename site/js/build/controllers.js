@@ -359,7 +359,7 @@ appControllers.controller('MainCtrl', ['$scope', '$location', 'library', 'result
         });
 
         $scope.applyTextPreset = function() {
-            $scope.data.text = "Escolha ou cole um texto.";
+            $scope.data.text = "Analisando...";
             textPresets.load( $scope.data.textPreset ).then(function(res) {
                 $scope.data.text = res;
             });
