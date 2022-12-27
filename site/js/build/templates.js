@@ -506,7 +506,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "    <p>\n" +
     "    	<img src='img/loading2.gif'>\n" +
     "    </p>\n" +
-    "    Escolha ou cole um texto.\n" +
+    "    Analisando...\n" +
     "</div>"
   );
 
