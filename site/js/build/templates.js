@@ -958,7 +958,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "                alternância entre os dedos,\n" +
     "                alternância entre as mãos\n" +
     "                e similaridade com o layout de referência,\n" +
-    "                nas seguintes proporções:\n" +
+    "                nas seguintes proporções de penalidade:\n" +
     "            </p>\n" +
     "            <form class='form-horizontal'>\n" +
     "                <table class=\"kla-table-adjust\">\n" +
