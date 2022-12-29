@@ -618,6 +618,7 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "            <label class='control-label' for='calc-preset'>Ajustes predefinidos:</label>\n" +
     "            <div class='controls'>\n" +
     "                <select id='calc-preset' ng-model='data.calcPreset' ng-change=\"applyCalcPreset()\">\n" +
+    "                    <option value='tadeu'>Tadeu</option>\n" +
     "                    <option value='spray'>Spray</option>\n" +
     "                    <option value='stevep'>SteveP</option>\n" +
     "                    <option value='patorjk'>Patorjk</option>\n" +

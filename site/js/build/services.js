@@ -27,27 +27,27 @@ appServices.factory('keyboards', [
         // setup layouts
     
         layouts[0] = {};
-        layouts[0].keySet = $.extend(true, {}, KB.keySet.iso_br.qwerty);
+        layouts[0].keySet = $.extend(true, {}, KB.keySet.iso_br.nativo);
         layouts[0].keyMap = $.extend(true, {}, KB.keyMap.iso_br.s683_225);
         layouts[0].keyboard = null;
 
         layouts[1] = {};
-        layouts[1].keySet = $.extend(true, {}, KB.keySet.iso_br.nativo);
+        layouts[1].keySet = $.extend(true, {}, KB.keySet.iso_br.colemak_br1);
         layouts[1].keyMap = $.extend(true, {}, KB.keyMap.iso_br.s683_225);
         layouts[1].keyboard = null;
 
         layouts[2] = {};
-        layouts[2].keySet = $.extend(true, {}, KB.keySet.iso_br.dvorak_br);
+        layouts[2].keySet = $.extend(true, {}, KB.keySet.iso_br.colemak_br2);
         layouts[2].keyMap = $.extend(true, {}, KB.keyMap.iso_br.s683_225);
         layouts[2].keyboard = null;        
         
         layouts[3] = {};
-        layouts[3].keySet = $.extend(true, {}, KB.keySet.iso_br.colemak);
+        layouts[3].keySet = $.extend(true, {}, KB.keySet.iso_br.colemak_br3);
         layouts[3].keyMap = $.extend(true, {}, KB.keyMap.iso_br.s683_225);
         layouts[3].keyboard = null;
 
         layouts[4] = {};
-        layouts[4].keySet = $.extend(true, {}, KB.keySet.iso_br.colemak_br);
+        layouts[4].keySet = $.extend(true, {}, KB.keySet.iso_br.colemak_br4);
         layouts[4].keyMap = $.extend(true, {}, KB.keyMap.iso_br.s683_225);
         layouts[4].keyboard = null;
         

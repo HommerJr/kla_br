@@ -426,6 +426,44 @@ appControllers.controller('MainCtrl', ['$scope', '$location', 'library', 'result
 
         $scope.applyCalcPreset = function() {
             switch ($scope.data.calcPreset) {
+                case "tadeu":
+                    $scope.settings = {
+                        simplify: $scope.settings.simplify,
+                        ctrlKeys: $scope.settings.ctrlKeys,
+                        autoIndent: $scope.settings.autoIndent,
+                        fScoringMethod: "stevep",
+                        weightDistance: 5,
+                        weightKeystroke: 2,
+                        weightSameFinger: 1,
+                        weightSameHand: 2,
+                        weightSimilarity: 0,
+                        scoreThumb: 1.0,
+                        scoreIndex: 1.0,
+                        scoreMiddle: 1.1,
+                        scoreRing: 1.3,
+                        scorePinky: 1.6,
+                        thetas: {left: 15, right: -20},
+                        autoThetas: true,
+                        depthThumb: 1.25,
+                        depthIndex: 1.0,
+                        depthMiddle: 1.1,
+                        depthRing: 1.3,
+                        depthPinky: 1.6,
+                        lateralThumb: 1.25,
+                        lateralIndex: 2.0,
+                        lateralMiddle: 2.0,
+                        lateralRing: 2.0,
+                        lateralPinky: 2.0,
+                        applyFittsLaw: true,
+                        refLayoutIndex: $scope.settings.refLayoutIndex,
+                        layerChange: 1,
+                        rowChange: 1,
+                        fingerChange: 2,
+                        handChange: 4,
+                        charMissing: 8,
+                        charFreqAccounting: true
+                    }
+                    break;
                 case "spray":
                     $scope.settings = {
                         simplify: $scope.settings.simplify,
