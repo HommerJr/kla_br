@@ -529,35 +529,30 @@ angular.module('kla').run(['$templateCache', function($templateCache) {
     "            <label class='control-label' for='text-presets'>Textos predefinidos:</label>\n" +
     "            <div class='controls'>\n" +
     "                <select id='text-presets' size='2' ng-model='data.textPreset' ng-change=\"applyTextPreset()\">\n" +
-    "                    <optgroup label='English Prose'>\n" +
-    "                        <option value='alice-ch1'>Alice in Wonderland, Chapter 1</option>\n"     +
-    "                        <option value='magna-carta-english'>Magna Carta</option>\n"     +
-    "                        <option value='nineteen-eighty-four-ch1'>1984, Chapter 1</option>\n"     +
-    "                        <option value='tarzan-of-the-apes'>Tarzan Of The Apes</option>\n"     +
-    "                        <option value='jungle-book'>Jungle Book</option>\n"     +
-    "                        <option value='quotes'>Quotes</option>\n"     +
-    "                        <option value='daode-jing'>Tao te Ching / DaodeJing</option>\n"     +
-    "                    </optgroup>\n" +
-    "                    <optgroup label='English Academic'>\n" +
-    "                        <option value='academic-1'>Cost Optimization Model</option>\n"     +
-    "                        <option value='academic-2'>Contractors’ Performance in Construction</option>\n"     +
-    "                        <option value='academic-3'>Binary Logistic Analysis</option>\n"     +
-    "                    </optgroup>\n" +
-    "                    <optgroup label='English Vocabulary'>\n" +
-    "                        <option value='common-english-words'>List of the most commonly used words</option>\n"     +
-    "                        <option value='common-sat-words'>Most commonly used SAT words</option>\n"     +
-    "                        <option value='difficultwords'>Difficult words</option>\n"     +
-    "                        <option value='medical'>Medical words</option>\n"     +
-    "                        <option value='bigrams'>Bigrams</option>\n"     +
-    "                    </optgroup>\n" +
-    "                    <optgroup label='Non-English'>\n" +
-    "                        <option value='lorem'>Latín: Lorem Ipsum</option>\n" +
-    "                        <option value='crime-and-punishment-ch1'>Russian: Crime and Punishment, Chapter 1</option>\n" +
-    "                        <option value='hajduk'>Russian: How an Old Rastaman Went to Africa</option>\n" +
-    "                        <option value='gol'>Tech: Game of Life</option>\n" +
-    "                        <option value='pi1000'>Tech: Pi 1000</option>\n" +
-    "                        <option value='pptt'>Tech: Programming Punctuation Torture Test</option>\n" +
-    "                    </optgroup>\n" +
+    // "                    <optgroup label='English Prose'>\n" +
+    "                        <option value='pequeno'>O Pequeno Príncipe</option>\n"     +
+    "                        <option value='constituicao'>Constituição Federal</option>\n"     +
+    "                        <option value='biblia'>Bíblia Sagrada</option>\n"     +
+    "                        <option value='50tons'>50 Tons de Cinza</option>\n"     +
+    "                        <option value='alquimista'>O Alquimista</option>\n"     +
+    "                        <option value='casmurro'>Dom Casmurro</option>\n"     +
+    "                        <option value='caso'>O Caso dos Dez Negrinhos</option>\n"     +
+    "                        <option value='como'>Como eu era antes de você</option>\n"     +
+    "                        <option value='conde'>O Conde de Monte-Cristo  </option>\n"     +
+    "                        <option value='conto'>Um Conto de Duas Cidades</option>\n"     +
+    "                        <option value='contrato'>Do Contrato Social</option>\n"     +
+    "                        <option value='cronicas'>As Crônicas de Gelo e Fogo</option>\n"     +
+    "                        <option value='culpa'>A culpa é das estrelas</option>\n"     +
+    "                        <option value='diario'>O Diário de Anne Frank</option>\n"     +
+    "                        <option value='eclipse'>Eclipse</option>\n"     +
+    "                        <option value='harry'>Harry Potter e a Pedra Filosofal</option>\n"     +
+    "                        <option value='lusiadas'>Os Lusíadas</option>\n"     +
+    "                        <option value='narnia'>As Crônicas de Nárnia</option>\n"     +
+    "                        <option value='quixote'>D. Quixote</option>\n"     +
+    "                        <option value='senhor'>O Senhor dos Anéis</option>\n"     +
+    "                        <option value='vento'>E o vento levou...</option>\n"     +
+    "                        <option value='todos'>Todos os textos juntos</option>\n"     +
+    // "                    </optgroup>\n" +
     "                </select>\n" +
     "            </div>\n" +
     "        </div>\n" +

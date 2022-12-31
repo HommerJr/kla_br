@@ -366,7 +366,7 @@ appControllers.controller('MainCtrl', ['$scope', '$location', 'library', 'result
         }
 
         if (typeof $scope.data.textPreset === 'undefined')
-            $scope.data.textPreset = 'alice-ch1';
+            $scope.data.textPreset = 'pequeno';
         if ( typeof $scope.data.text === 'undefined' )
             $scope.applyTextPreset();
 
@@ -628,7 +628,7 @@ appControllers.controller('MainCtrl', ['$scope', '$location', 'library', 'result
         if (typeof $scope.settings.autoIndent === "undefined")
                 $scope.settings.autoIndent = "none";
         if (typeof $scope.data.calcPreset === "undefined") {
-            $scope.data.calcPreset = "spray";
+            $scope.data.calcPreset = "tadeu";
             $scope.applyCalcPreset();
         }
         if (typeof $scope.settings.refLayoutIndex === "undefined") {
